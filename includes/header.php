@@ -9,13 +9,13 @@
 </head>
 <body class="body">
     <div class="container">
-        <div class="img-logo">
-            <img id="logo" src="assets\img\img_logo_preto.png" alt="Logo">
-        </div>
-        <div class="img_login">
-            <img id="login" src="assets\img\img_login.png" alt="Login">
+        <div class="texto1">
+            <p>dfasfsafasfas</p>
         </div>
 
+        <div class="texto2">
+            <p>dasfdasfdasfdasfasfas</p>
+        </div>
     </div>
 </body>
 </html>
