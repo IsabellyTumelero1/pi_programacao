@@ -8,45 +8,20 @@
     --color-white: #F2ECE4;
 }
 
-/* fonte */
-
-.body{
-    margin: 0;
-    padding: 0;
-}
-
 .container{
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
     width: 100vw;
-    margin: 0;
-    height: 125px;
     background-color: tomato;
 }
 
-.img-logo{
-    justify-content: center;
-    display: flex;
-    width: 50%;
-    height: auto;
-    background-color: blue;
+.texto1{
+    background-color: #0B0E19;
+    margin: 0 auto;
 }
 
-#logo{
-    width: 250px;
-    height: auto;
-}
-
-.img_login{
-    display: flex;
-    width: 5%;
-    height: auto;
-    background-color: aqua;
-
-}
-
-#login{
-    width: auto;
-    margin-top: 12px;
-    height: 75px;
+.texto2{
+    background-color: #E9A0A1;
+    margin-left: auto;
 }
