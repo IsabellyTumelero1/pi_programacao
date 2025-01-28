@@ -1,0 +1,53 @@
+
+
+:root{
+    --color-rosa-claro: #F3E4E4;
+    --color-rosa-escuro: #E9A0A1;
+    --color-rosa-intermediario: #E99F9F6E;
+    --color-black: #0B0E19;
+    --color-white: #F2ECE4;
+}
+
+/* fonte */
+
+.body{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    margin: 0;
+    height: 125px;
+    background-color: tomato;
+}
+
+.img-logo{
+    align-content: center;
+    width: 250px;
+    height: auto;
+    background-color: blue;
+}
+
+#logo{
+    width: 250px;
+    height: auto;
+}
+
+.img_login{
+    float: right;
+    margin: 0;
+    width: 50px;
+    height: auto;
+    background-color: aqua;
+
+}
+
+#login{
+    width: auto;
+    margin-top: 12px;
+    height: 75px;
+}
