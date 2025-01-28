@@ -18,7 +18,6 @@
 .container{
     display: flex;
     justify-content: space-between;
-    align-items: center;
     width: 100vw;
     margin: 0;
     height: 125px;
@@ -26,8 +25,9 @@
 }
 
 .img-logo{
-    align-content: center;
-    width: 250px;
+    justify-content: center;
+    display: flex;
+    width: 50%;
     height: auto;
     background-color: blue;
 }
@@ -38,9 +38,8 @@
 }
 
 .img_login{
-    float: right;
-    margin: 0;
-    width: 50px;
+    display: flex;
+    width: 5%;
     height: auto;
     background-color: aqua;
 
