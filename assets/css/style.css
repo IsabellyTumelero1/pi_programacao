@@ -1,6 +1,4 @@
-
-
-:root{
+:root {
     --color-rosa-claro: #F3E4E4;
     --color-rosa-escuro: #E9A0A1;
     --color-rosa-intermediario: #E99F9F6E;
@@ -8,20 +6,44 @@
     --color-white: #F2ECE4;
 }
 
-.container{
+.container {
+    background-color: var(--color-rosa-escuro);
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    width: 100vw;
-    background-color: tomato;
+    flex-wrap: nowrap;
+    max-width: 100vw;
+    max-height: 85px;
 }
 
-.texto1{
-    background-color: #0B0E19;
+.div-meio {
+    max-width: 200px;
+    height: 100px;
     margin: 0 auto;
+    position: relative;
 }
 
-.texto2{
-    background-color: #E9A0A1;
-    margin-left: auto;
+#img-logo {
+    max-width: 200px;
+    height: 100px;
+}
+
+.div-direita {
+    max-width: 64px;
+    height: 64px;
+    margin-top: 15px;
+    position: relative;
+    margin-right: 10px;
+    justify-content: center;
+    background-color: #0B0E19;
+}
+
+#img-login {
+    object-fit: cover;
+}
+
+.texto-login {
+    margin: 0 auto;
+    font-size: 12px;
+    background-color: aqua;
 }
