@@ -20,16 +20,6 @@
                 <a href="#" class="texto-login">Entre ou Cadastre-se</a>
             </div>
         </div>
-
-        <nav>
-            <ul>
-                <li><a href="/">item 1</a></li>
-                <li><a href="/">item 2</a></li>
-                <li><a href="/">item 3</a></li>
-                <li><a href="/">item 4</a></li>
-                <li><a href="/">item 5</a></li>
-            </ul>
-        </nav>
     </header>
     <main></main>
 </body>
