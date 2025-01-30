@@ -6,9 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pi-Programação</title>
     <link rel="stylesheet" href="assets\css\style.css">
-    <link rel="stylesheet" href="includes\footer.php">
-</head>
-
 <body>
     <header>
         <a href="#"><img src="assets\img\img_logo_preto.png" alt="img-logo"></a>
