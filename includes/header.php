@@ -9,19 +9,19 @@
     <link rel="stylesheet" href="includes\footer.php">
 </head>
 
-<body class="body">
+<body>
     <header>
-        <div class="container">
-            <div class="div-meio">
-                <img id="img-logo" src="assets\img\img_logo_preto.png" alt="img-logo">
-            </div>
-            <div class="div-direita">
-                <img id="img-login" src="assets\img\icons8-usuário-homem-com-círculo-32.png" alt="img-login">
-                <a href="#" class="texto-login">Entre ou Cadastre-se</a>
-            </div>
-        </div>
+        <a href="#"><img src="assets\img\img_logo_preto.png" alt="img-logo"></a>
+        <nav>
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Quem somos</a></li>
+                <li><a href="#">Procedimentos</a></li>
+                <li><a href="#">Micro do Bem</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </nav>
     </header>
-    <main></main>
 </body>
 <script src="assets\js\script.js"></script>
 
