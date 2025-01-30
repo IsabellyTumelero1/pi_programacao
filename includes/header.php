@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pi-Programação</title>
     <link rel="stylesheet" href="assets\css\style.css">
+
 <body>
     <header>
         <a href="#"><img src="assets\img\img_logo_preto.png" alt="img-logo"></a>
@@ -13,7 +14,13 @@
             <ul class="menu">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Quem somos</a></li>
-                <li><a href="#">Procedimentos</a></li>
+                <li><a href="#">Procedimentos</a>
+                    <ul class="dropdown">
+                        <li><a href="#"></a>1</li>
+                        <li><a href="#"></a>2</li>
+                        <li><a href="#"></a>3</li>
+                    </ul>
+                </li>
                 <li><a href="#">Micro do Bem</a></li>
                 <li><a href="includes\login.php">Login</a></li>
             </ul>

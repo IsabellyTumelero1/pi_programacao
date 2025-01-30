@@ -21,6 +21,10 @@ header {
     align-items: center;
 }
 
+.dropdown{
+    background: white;
+}
+
 .menu li a{
     text-decoration: none;
     padding: 5px;
@@ -37,6 +41,10 @@ header {
 header a img {
     width: auto;
     height: 100px;
+}
+
+header .menu a:hover{
+    background-color: var(--color-rosa-escuro);
 }
 
 .fundo{
