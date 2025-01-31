@@ -54,7 +54,7 @@ header .menu a:hover{
     background: var(--color-rosa-claro);
     list-style: none;
     padding: 10px 0;
-    top: 100%;
+    top: 125%;
     left: 0;
     min-width: 150px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
