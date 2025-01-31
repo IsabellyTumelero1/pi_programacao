@@ -21,10 +21,6 @@ header {
     align-items: center;
 }
 
-.dropdown{
-    background: white;
-}
-
 .menu li a{
     text-decoration: none;
     padding: 15px;
@@ -47,6 +43,46 @@ header .menu a:hover{
     background-color: var(--color-rosa-escuro);
 }
 
+.menu li {
+    position: relative;
+}
+
+/* Estilizando o submenu */
+.dropdown {
+    display: none;
+    position: absolute;
+    background: var(--color-rosa-claro);
+    list-style: none;
+    padding: 10px 0;
+    top: 100%;
+    left: 0;
+    min-width: 150px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+/* Estilizando os itens do submenu */
+.dropdown li {
+    padding: 8px 15px;
+}
+
+/* Estilizando os links do submenu */
+.dropdown li a {
+    text-decoration: none;
+    color: #0B0E19;
+    display: block;
+}
+
+/* Exibir o dropdown ao passar o mouse */
+.menu li:hover .dropdown {
+    display: block;
+}
+
+/* Mudança de cor ao passar o mouse */
+.dropdown li a:hover {
+    background: var(--color-rosa-escuro);
+}
+
 .fundo{
     height: 86.7vh;
     margin: 0;
@@ -62,12 +98,11 @@ header .menu a:hover{
     height: 75%;
 }
 
-
 .feedback{
     display: flex;
 }
+
 .feedback h1{
     justify-content: center;
     align-items: center;
 }
-
