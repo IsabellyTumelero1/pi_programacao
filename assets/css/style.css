@@ -6,7 +6,10 @@
     --color-white: #F2ECE4;
 }
 
-body, ul, li, p{
+body,
+ul,
+li,
+p {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -24,13 +27,13 @@ header {
     overflow: hidden;
 }
 
-.menu li a{
+.menu li a {
     text-decoration: none;
     padding: 15px;
     color: #0B0E19;
 }
 
-.menu{
+.menu {
     list-style: none;
     display: flex;
     gap: 15px;
@@ -42,7 +45,7 @@ header a img {
     height: 130px;
 }
 
-header .menu a:hover{
+header .menu a:hover {
     background-color: var(--color-rosa-escuro);
 }
 
@@ -86,26 +89,54 @@ header .menu a:hover{
     background: var(--color-rosa-escuro);
 }
 
-.fundo{
+.fundo {
     height: 86.7vh;
     margin: 0;
-    background: linear-gradient(to bottom, #e99f9f6e 50%, #F3E4E4 50%);;
+    background: linear-gradient(to bottom, #e99f9f6e 50%, #F3E4E4 50%);
+    ;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.fundo #img_fundo{
+.fundo #img_fundo {
     position: absolute;
     width: 80%;
     height: 75%;
 }
 
-.feedback{
+.feedback {
     display: flex;
+    height: 100vh;
+    background-color: var(--color-rosa-claro);
+    margin: 0;
 }
 
-.feedback h1{
-    justify-content: center;
+h1 {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    color: var(--color-black);
+    font-size: 35px;
+}
+
+.feedback .feedback-container {
+    display: flex;
+    background-color: tomato;
+    height: 100vh;
+    width: 100vw;
+    justify-content: space-around;
     align-items: center;
+}
+
+.feedback .feedback-container .feedback-comentario {
+    object-fit: cover;
+    background-color: white;
+    width: 300px;
+    height: 200px;
+    margin: 20px;
+    padding: 20px;
+    border-top: 3.5px solid black;
+    border-left: 3.5px solid black;
 }
