@@ -7,9 +7,11 @@ section {
     height: 100vh;
     background-color: black;
     margin: 0;
+    overflow: hidden;
 }
 
-h1 {
+.titulo {
+    margin-top: -5%;
     text-align: center;
     color: #E9A0A1;
     font-family: 'Roboto', sans-serif;

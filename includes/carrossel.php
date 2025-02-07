@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="assets\css\carrossel.css">
 
 <section>
-    <h1>Procedimentos</h1>
+    <h1 class="titulo">Procedimentos</h1>
 
     <div class="carrossel">
         <div class="carrossel-container">

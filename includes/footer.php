@@ -1,6 +1,9 @@
-<!DOCTYPE html>
-<html lang="pt-br">
 
+
+</body>
+<script src="assets\js\script.js"></script>
+
+</html>
 <footer>
     <div>
         <img src="" alt="Camila">
