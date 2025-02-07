@@ -1,0 +1,19 @@
+footer{
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+p{
+    color: white;
+}
+
+#logo-rosa{
+    width: auto;
+    height: 130px;
+}
+
+#redes-sociais{
+    display: flex;
+}
