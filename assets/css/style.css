@@ -88,6 +88,20 @@ header .menu a:hover {
     background: var(--color-rosa-escuro);
 }
 
+@media (max-width: 600px) {
+    .menu li a{
+        text-decoration: none;
+        padding: 5px;
+        color: #0B0E19;
+    }
+    
+    .menu{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
 .fundo {
     height: 86.7vh;
     margin: 0;
