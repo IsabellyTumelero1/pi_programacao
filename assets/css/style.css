@@ -5,6 +5,7 @@
     --color-black: #0B0E19;
     --color-white: #F2ECE4;
 }
+
 body, ul, li, p{
     margin: 0;
     padding: 0;
@@ -13,12 +14,14 @@ body, ul, li, p{
     font-family: 'Roboto', sans-serif;
     font-weight: 600;
 }
+
 header {
     display: flex;
     background: var(--color-rosa-claro);
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    overflow: hidden;
 }
 
 .menu li a{
