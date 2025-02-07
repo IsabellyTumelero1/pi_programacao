@@ -46,6 +46,7 @@ header a img {
 
 header .menu a:hover {
     background-color: var(--color-rosa-escuro);
+    border-radius: 10px;
 }
 
 .menu li {
