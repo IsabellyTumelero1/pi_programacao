@@ -121,22 +121,21 @@ header .menu a:hover {
 .feedback {
     display: flex;
     height: 100vh;
-    background-color: var(--color-rosa-claro);
+    background-color: var(--color-rosa-intermediario);
     margin: 0;
 }
 
 h1 {
     text-align: center;
-    margin-top: 10px;
     margin-bottom: 10px;
-    padding: 10px;
+    padding: 20px;
+    margin-bottom: -100px;
     color: var(--color-black);
     font-size: 35px;
 }
 
 .feedback .feedback-container {
     display: flex;
-    background-color: tomato;
     height: 100vh;
     width: 100vw;
     justify-content: space-around;
@@ -145,11 +144,16 @@ h1 {
 
 .feedback .feedback-container .feedback-comentario {
     object-fit: cover;
-    background-color: white;
     width: 300px;
     height: 200px;
-    margin: 20px;
     padding: 20px;
     border-top: 3.5px solid black;
     border-left: 3.5px solid black;
+    transition: transform 0.7s ease;
+}
+
+.feedback-comentario:hover{
+    color: var(--color-white);
+    background-color: var(--color-rosa-escuro);
+    transform: scale(1.3);
 }
