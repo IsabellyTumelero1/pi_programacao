@@ -121,7 +121,7 @@ header .menu a:hover {
 
 .feedback {
     display: flex;
-    height: 100vh;
+    height: 78vh;
     background-color: var(--color-rosa-intermediario);
     margin: 0;
 }
