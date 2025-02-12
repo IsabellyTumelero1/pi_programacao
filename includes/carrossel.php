@@ -26,5 +26,7 @@
             <span class="dot" onclick="goToSlide(1)"></span>
             <span class="dot" onclick="goToSlide(2)"></span>
         </div>
+
+        <!-- <button><a href="">Saiba Mais</a></button> -->
     </div>
 </section>

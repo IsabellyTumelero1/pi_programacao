@@ -20,7 +20,7 @@
                     <li><a href="#">Quem somos</a></li>
                     <li><a href="#">Procedimentos</a>
                         <ul class="dropdown">
-                            <li><a href="#">Procedimento1</a></li>
+                            <li><a href="procedimento1.php">Procedimento1</a></li>
                             <li><a href="#">Procedimento2</a></li>
                             <li><a href="#">Procedimento3</a></li>
                             <li><a href="#">Procedimento4</a></li>
