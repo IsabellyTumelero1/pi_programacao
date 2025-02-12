@@ -5,6 +5,10 @@ footer{
     align-content: center;
 }
 
+.container{
+    flex-direction: column;
+}
+
 p{
     color: white;
 }
@@ -17,3 +21,5 @@ p{
 #redes-sociais{
     display: flex;
 }
+
+
