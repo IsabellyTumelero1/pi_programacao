@@ -1,3 +1,11 @@
+:root {
+    --color-rosa-claro: #F3E4E4;
+    --color-rosa-escuro: #E9A0A1;
+    --color-rosa-intermediario: #E99F9F6E;
+    --color-black: #0B0E19;
+    --color-white: #F2ECE4;
+}
+
 footer{
     background-color: black;
     display: flex;
@@ -6,20 +14,30 @@ footer{
 }
 
 .container{
+    margin-top: 30px;
     flex-direction: column;
+    display: flex;
+    align-items: center;
+    margin-right: 150px;
 }
 
-p{
-    color: white;
+.endereco{
+    color: var(--color-rosa-escuro);
+    margin-bottom: 30px;
+    font-size: 20px;
 }
 
 #logo-rosa{
     width: auto;
     height: 130px;
+    margin-left: 100px;
 }
 
 #redes-sociais{
     display: flex;
 }
 
-
+.imagem{
+    width: auto;
+    height: 25px;
+}

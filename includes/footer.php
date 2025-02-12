@@ -3,12 +3,12 @@
 
 
     <div class="container">
-        <p>R.Itapemirim, 436 - Jardim Ipiranga</p>
+        <p class="endereco">R.Itapemirim, 436 - Jardim Ipiranga</p>
 
         <div class="redes-sociais">
-            <img src="assets\img\whatsapp.png" alt="">
-            <img src="assets\img\instagram.png" alt="">
-            <img src="assets\img\marcador.png" alt="">
+            <img class="imagem" src="assets\img\whatsapp.png" alt="">
+            <img class="imagem" src="assets\img\instagram.png" alt="">
+            <img class="imagem" src="assets\img\marcador.png" alt="">
         </div>
     </div>
 
