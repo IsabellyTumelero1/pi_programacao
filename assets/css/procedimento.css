@@ -4,11 +4,17 @@ section{
     display: flex;
 }
 
+img{
+    height: 250px;
+    width: auto;
+}
+
 .teste{
     display: flex;
     flex-direction: column;
     background-color: blueviolet;
     width: 470px;
+    padding-right: 30px;
 }
 
 .topo{
@@ -23,7 +29,11 @@ section{
     margin-left: 30px;
 }
 
-.h1{
+.texto-procedimento{
     background-color: aqua;
-    width: 400px;
+    width: 100vw;
+}
+
+.comentario-tecnica{
+    position: relative;
 }
