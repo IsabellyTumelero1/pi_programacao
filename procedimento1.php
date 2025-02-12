@@ -14,6 +14,10 @@ include_once '.\includes\header.php';
             <img src="assets\img\2 copy.jpg" alt="2">
         </div>
     </div>
+
+    <div class="h1">Técnica 1</div>
+
+    
 </section>
 
 <?php
