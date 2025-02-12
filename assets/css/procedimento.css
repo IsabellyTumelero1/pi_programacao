@@ -1,21 +1,18 @@
-section{
+.teste{
     display: flex;
+    flex-direction: column;
     background-color: blueviolet;
-    height: 68vh;
-    overflow: hidden;
+    width: 470px;
 }
 
-
-
-.container2 .texto {
-    background-color: aqua;
-    height: 500px;
-    width: 600px;
+.topo{
+    margin-top: 12px;
+    margin-bottom: 8px;
+    margin-left: 30px;
 }
 
-.img-tecnica {
-    background-color: tomato;
-    width: 400px;
-    height: 250px;
+.baixo{
+    margin-top: 5px;
+    margin-bottom: 12px;
+    margin-left: 30px;
 }
-
