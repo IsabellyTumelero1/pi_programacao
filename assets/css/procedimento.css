@@ -1,0 +1,21 @@
+section{
+    display: flex;
+    background-color: blueviolet;
+    height: 68vh;
+    overflow: hidden;
+}
+
+
+
+.container2 .texto {
+    background-color: aqua;
+    height: 500px;
+    width: 600px;
+}
+
+.img-tecnica {
+    background-color: tomato;
+    width: 400px;
+    height: 250px;
+}
+
