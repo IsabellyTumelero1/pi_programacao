@@ -14,8 +14,9 @@
         $telefone = $_POST['telefone'];
         $genero = $_POST['genero'];
 
-        $result = mysqli_query($conexao, "INSERT INTO usuarios(nome, senha, email, telefone, genero) VALUES('$nome', ''$senha', $email', '$telefone', '$genero')");
-
+        $result = mysqli_query($conexao, "INSERT INTO usuarios(nome, senha, email, telefone, genero) 
+        VALUES('$nome', '$senha', '$email', '$telefone', '$genero')");
+        
         header('Location: login.php'); //redireciona para tela de login
     }
 ?>
