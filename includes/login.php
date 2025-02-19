@@ -90,7 +90,7 @@
 </style>
 <body>
     <div class="formulario">
-        <form action="">
+        <form action="controle_login.php">
             <h2>Login</h2>
             <div class="input_box">
                 <input type="text" name="nome" placeholder="Usuário" required>
