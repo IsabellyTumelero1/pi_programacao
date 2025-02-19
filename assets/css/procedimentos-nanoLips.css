@@ -1,0 +1,73 @@
+:root {
+    --color-rosa-claro: #F3E4E4;
+    --color-rosa-escuro: #E9A0A1;
+    --color-rosa-intermediario: #E99F9F6E;
+    --color-black: #0B0E19;
+    --color-white: #F2ECE4;
+}
+
+.Tecnica {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-rosa-claro);
+}
+
+.titulo-nanoLips {
+    justify-content: center;
+    text-align: center;
+    color: var(--color-black);
+    font-size: 35px;
+    margin-bottom: 2px;
+}
+
+.conteudo-tecnica {
+    display: flex;
+    align-items: center;
+}
+
+.image-nanoLips {
+    display: flex;
+    flex-direction: column;
+}
+
+.img-nanoLips-formatacao {
+    width: 400px;
+    height: 250px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 30px;
+}
+
+.descricao-tecnica{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    align-items: center;
+}
+
+.descricao-nanoLips {
+    height: 500px;
+    width: 800px;
+    color: var(--color-black);
+    font-size: 20px;
+    margin-left: 40px;
+    text-align: justify;
+}
+
+.btn-agendamento {
+    background-color: var(--color-rosa-escuro);
+    border: none;
+    border-radius: 10px;
+    height: 50px;
+    width: 160px;
+    font-size: 20px;
+}
+
+.btn-link {
+    text-decoration: none;
+    color: var(--color-black);
+}
+
+/* button:hover{
+    transform: ;
+} */
