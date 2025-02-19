@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="assets\css\style.css">
     <link rel="stylesheet" href="assets\css\footer.css">
+    <link rel="stylesheet" href="assets\css\procedimentos-nanoLips.css">
 
 <body>
     <div class="header">
@@ -16,11 +17,11 @@
 
             <nav>
                 <ul class="menu">
-                    <li><a href="#">Home</a></li>
+                    <li><a href="index.php">Home</a></li>
                     <li><a href="#">Quem somos</a></li>
                     <li><a href="#">Procedimentos</a>
                         <ul class="dropdown">
-                            <li><a href="procedimento1.php">Procedimento1</a></li>
+                            <li><a href="procedimentos-nanoLips.php">Nano Lips</a></li>
                             <li><a href="#">Procedimento2</a></li>
                             <li><a href="#">Procedimento3</a></li>
                             <li><a href="#">Procedimento4</a></li>
