@@ -1,4 +1,5 @@
 <?php
+session_start();
     //print_r($_REQUEST);
 
     if(isset($_POST['submit']) && !empty($_POST['email']) && !empty($_POST['senha'])){
@@ -22,10 +23,14 @@
         if(mysqli_num_rows($result) < 1){
             //verifica se a quantidade de linhas da variável $result é menor que 1
             //print_r("Não existe");
+            unset($_SESSION['email']); //destrói qualquer email ou senha que não tiver resgistro
+            unset($_SESSION['senha']);
             header('Location: login.php');
         } else{
             //caso a quantidade for maior que 1
             //print_r("Existe");
+            $_SESSION['email'] = $email;
+            $_SESSION['senha'] = $senha;
             header('Location: index.php');
         }
     }else {
