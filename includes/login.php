@@ -60,12 +60,17 @@
         background-color: white;
         border: none;
         outline: none;
-        border-radius: 40px;
+        border-radius: 20px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
         cursor: pointer;
         font-size: 16px;
         color: black;
         font-weight: 600;
+    }
+
+    .formulario .btn:hover{
+        background-color: black;
+        color: white;
     }
 
     .formulario .cadastrar{
@@ -80,8 +85,7 @@
     }
 
     .cadastrar a:hover{
-        text-decoration: underline;
-        color: #e9a0a1;
+        color: black;
     }
 </style>
 <body>
@@ -94,9 +98,9 @@
             <div class="input_box">
                 <input type="password" name="senha" placeholder="Senha" required>                
             </div>
-            <button type="submit" class="btn">Logar</button>
+            <input type="submit" name="submit" value="Logar" class="btn">
             <div class="cadastrar">
-                <a href="cadastrar.php">Ainda não se cadastrou?</a>
+                <a href="cadastro.php">Ainda não se cadastrou?</a>
             </div>
         </form>
     </div>
