@@ -4,15 +4,15 @@ include '.\includes\header.php';
 
 <section class="tecnica">
     <div class="conteudo-tecnica">
-        <div class="image-nanoLips">
-            <img class="img-nanoLips-formatacao" src="assets\img\img-nanoLips.jpg" alt="Imagem_1">
-            <img class="img-nanoLips-formatacao" src="assets\img\img-nanoLips2.jpg" alt="Imagem_2">
+        <div class="image-centralizacao">
+            <img class="img-formatacao" src="assets\img\img-nanoLips.jpg" alt="Imagem_1">
+            <img class="img-formatacao" src="assets\img\img-nanoLips2.jpg" alt="Imagem_2">
         </div>
 
 
         <div class="texto-tecnica">
-            <div class="titulo-nanoLips">Técnica 1</div>
-            <p class="descricao-nanoLips">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure in velit, voluptas sit dicta fugit sunt
+            <div class="titulo-tecnica">Nano Lips</div>
+            <p class="conteudo-descricao">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure in velit, voluptas sit dicta fugit sunt
                 laboriosam recusandae doloribus odio magnam. Id, dolor architecto veniam et praesentium odio, atque
                 vitae inventore in hic tempore adipisci nam voluptatibus iste itaque recusandae illum molestias sit,
                 deleniti rem repellendus placeat! Necessitatibus, quisquam maiores laboriosam ullam nulla deleniti
@@ -28,7 +28,7 @@ include '.\includes\header.php';
                 adipisci. Quam fuga fugit quidem? Illo ab magnam ipsum sunt, quidem iste veritatis porro, facilis
                 aliquid repellendus culpa sequi eligendi, similique nam quia cum!
                 <br><br>
-                <button class="btn-agendamento"><a class="btn-link" href="login.html">Agende-se</a></button>
+                <button class="btn-agendamento"><a class="btn-link" href="login.html">Agendar</a></button>
             </p>
         </div>
     </div>

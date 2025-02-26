@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="assets\css\style.css">
     <link rel="stylesheet" href="assets\css\footer.css">
-    <link rel="stylesheet" href="assets\css\procedimentos-nanoLips.css">
+    <link rel="stylesheet" href="assets\css\procedimentos-formatacao.css">
 
 <body>
     <div class="header">
@@ -23,7 +23,7 @@
                         <ul class="dropdown">
                             <li><a href="procedimentos-nanoLips.php">Nano Lips</a></li>
                             <li><a href="procedimentos-pigmentacaoSobrancelha">Nano Pigmentação de Sobrancelhas</a></li>
-                            <li><a href="procedimentos-browsRepair">Brows Repair</a></li>
+                            <li><a href="procedimentos-browsRepair.php">Brows Repair</a></li>
                             <li><a href="procedimentos-designSobrancelha">Design de Sobrancelha</a></li>
                             <li><a href="procedimentos-laser">Laser</a></li>
                         </ul>
