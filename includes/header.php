@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Camila</title>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="assets\img\favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="assets\css\style.css">
     <link rel="stylesheet" href="assets\css\footer.css">
     <link rel="stylesheet" href="assets\css\procedimentos-formatacao.css">
@@ -13,7 +13,7 @@
 <body>
     <div class="header">
         <header>
-            <a href="#"><img class="img-logo-header" src="assets\img\img_logo_preto.png" alt="img-logo"></a>
+            <a href="index.php"><img class="img-logo-header" src="assets\img\img_logo_preto.png" alt="img-logo"></a>
 
             <nav>
                 <ul class="menu">
