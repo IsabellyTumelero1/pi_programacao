@@ -66,6 +66,7 @@
 .btn-link {
     text-decoration: none;
     color: var(--color-black);
+    padding: 15px;
 }
 
 .texto-tecnica{

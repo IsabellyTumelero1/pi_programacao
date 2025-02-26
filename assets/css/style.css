@@ -42,7 +42,7 @@ header {
 .img-logo-header {
     width: auto;
     height: 130px;
-    padding-left: 100px;
+    margin-left: 100px;
 }
 
 header .menu a:hover {
