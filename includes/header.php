@@ -22,7 +22,7 @@
                     <li><a href="#">Procedimentos</a>
                         <ul class="dropdown">
                             <li><a href="procedimentos-nanoLips.php">Nano Lips</a></li>
-                            <li><a href="procedimentos-pigmentacaoSobrancelha">Nano Pigmentação de Sobrancelhas</a></li>
+                            <li><a href="procedimentos-pigmentacaoSobrancelha.php">Nano Pigmentação de Sobrancelhas</a></li>
                             <li><a href="procedimentos-browsRepair.php">Brows Repair</a></li>
                             <li><a href="procedimentos-designSobrancelha">Design de Sobrancelha</a></li>
                             <li><a href="procedimentos-laser">Laser</a></li>
