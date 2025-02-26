@@ -31,7 +31,7 @@ session_start();
             //print_r("Existe");
             $_SESSION['email'] = $email;
             $_SESSION['senha'] = $senha;
-            header('Location: index.php');
+            header('Location: /pi_programacao');
         }
     }else {
         header(('Location: login.php')); //retorna para login caso não acesse

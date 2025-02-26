@@ -68,6 +68,10 @@
     color: var(--color-black);
 }
 
+.texto-tecnica{
+    margin-bottom: 20px;
+}
+
 /* button:hover{
     transform: ;
 } */
