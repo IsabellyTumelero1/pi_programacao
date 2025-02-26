@@ -25,7 +25,7 @@
                             <li><a href="procedimentos-pigmentacaoSobrancelha.php">Nano Pigmentação de Sobrancelhas</a></li>
                             <li><a href="procedimentos-browsRepair.php">Brows Repair</a></li>
                             <li><a href="procedimentos-designSobrancelha.php">Design de Sobrancelha</a></li>
-                            <li><a href="procedimentos-laser">Laser</a></li>
+                            <li><a href="procedimentos-laser.php">Laser</a></li>
                         </ul>
                     </li>
                     <li><a href="#">Micro do Bem</a></li>
