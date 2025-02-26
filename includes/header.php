@@ -13,7 +13,7 @@
 <body>
     <div class="header">
         <header>
-            <a href="#"><img src="assets\img\img_logo_preto.png" alt="img-logo"></a>
+            <a href="#"><img class="img-logo-header" src="assets\img\img_logo_preto.png" alt="img-logo"></a>
 
             <nav>
                 <ul class="menu">
@@ -24,7 +24,7 @@
                             <li><a href="procedimentos-nanoLips.php">Nano Lips</a></li>
                             <li><a href="procedimentos-pigmentacaoSobrancelha.php">Nano Pigmentação de Sobrancelhas</a></li>
                             <li><a href="procedimentos-browsRepair.php">Brows Repair</a></li>
-                            <li><a href="procedimentos-designSobrancelha">Design de Sobrancelha</a></li>
+                            <li><a href="procedimentos-designSobrancelha.php">Design de Sobrancelha</a></li>
                             <li><a href="procedimentos-laser">Laser</a></li>
                         </ul>
                     </li>

@@ -39,9 +39,10 @@ header {
     margin-right: 15px;
 }
 
-header a img {
+.img-logo-header {
     width: auto;
     height: 130px;
+    padding-left: 100px;
 }
 
 header .menu a:hover {

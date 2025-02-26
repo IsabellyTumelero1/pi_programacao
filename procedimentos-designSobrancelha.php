@@ -5,13 +5,13 @@ include '.\includes\header.php';
 <section class="tecnica">
     <div class="conteudo-tecnica">
         <div class="image-centralizacao">
-            <img class="img-formatacao" src="assets\img\img-nanoLips.jpg" alt="Imagem_1">
-            <img class="img-formatacao" src="assets\img\img-nanoLips2.jpg" alt="Imagem_2">
+            <img class="img-formatacao" src="assets\img\img-designSobrancelha.jpg" alt="Imagem_1">
+            <img class="img-formatacao" src="assets\img\img-designSobrancelha2.jpg" alt="Imagem_2">
         </div>
 
 
         <div class="texto-tecnica">
-            <div class="titulo-tecnica">Nano Lips</div>
+            <div class="titulo-tecnica">Design de Sobrancelha</div>
             <p class="conteudo-descricao">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure in velit, voluptas sit dicta fugit sunt
                 laboriosam recusandae doloribus odio magnam. Id, dolor architecto veniam et praesentium odio, atque
                 vitae inventore in hic tempore adipisci nam voluptatibus iste itaque recusandae illum molestias sit,
