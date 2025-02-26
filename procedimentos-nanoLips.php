@@ -2,7 +2,7 @@
 include '.\includes\header.php';
 ?>
 
-<section class="Tecnica">
+<section class="tecnica">
     <div class="conteudo-tecnica">
         <div class="image-nanoLips">
             <img class="img-nanoLips-formatacao" src="assets\img\img-nanoLips.jpg" alt="Imagem_1">

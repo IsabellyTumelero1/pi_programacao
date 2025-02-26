@@ -6,7 +6,7 @@
     --color-white: #F2ECE4;
 }
 
-.Tecnica {
+.tecnica {
     display: flex;
     flex-direction: column;
     background-color: var(--color-rosa-claro);
