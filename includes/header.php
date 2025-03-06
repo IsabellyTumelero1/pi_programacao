@@ -29,7 +29,19 @@
                         </ul>
                     </li>
                     <li><a href="#">Micro do Bem</a></li>
-                    <li><a href="includes\login.php">Login</a></li>
+                    <?php
+                    if (!isset($_SESSION['email'])) {
+                        // Se o usuário não estiver logado, exibe o link de login
+                        echo "<li><a href='includes/login.php'>Login</a></li>";
+                    } else {
+                        // Caso contrário, exibe o nome dele e o link de logout
+                        echo "<li><a href='#'>{$_SESSION['nome']}</a>";
+                        echo "<ul class='dropdown'>";
+                        echo "<li><a href='includes/logout.php'>Logout</a></li>";
+                        echo "</ul>";
+                        echo "</li>";
+                    }
+                    ?>
                 </ul>
             </nav>
         </header>

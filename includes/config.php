@@ -2,7 +2,7 @@
     $dbHost = 'localhost';
     $dbUsername = 'root';
     $dbPassword = '';
-    $dbName = 'db_login'; //nome fictício
+    $dbName = 'bd_teste'; //nome fictício
 
     $conexao = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
 

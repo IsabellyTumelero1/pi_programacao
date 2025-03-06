@@ -1,5 +1,14 @@
 <?php
+session_start();
 include '.\includes\header.php';
+
+// Verifica se o usuário está logado
+if (!isset($_SESSION['email'])) {
+    // Se não estiver logado, redireciona para o login, passando o endereço atual na URL
+    $currentPage = "procedimentos-nanoLips.php"; // Nome da página atual
+    header("Location: includes/login.php?redirect=$currentPage");
+    exit();
+}
 ?>
 
 <section class="tecnica">
@@ -28,7 +37,18 @@ include '.\includes\header.php';
                 adipisci. Quam fuga fugit quidem? Illo ab magnam ipsum sunt, quidem iste veritatis porro, facilis
                 aliquid repellendus culpa sequi eligendi, similique nam quia cum!
                 <br><br>
-                <button class="btn-agendamento"><a class="btn-link" href="login.html">Agendar</a></button>
+                <button class="btn-agendamento">
+                    <?php
+                    // Verifica se o usuário está logado
+                    if (isset($_SESSION['email'])) {
+                        // Se estiver logado, permite o acesso ao agendamento
+                        echo '<a class="btn-link" href="includes/agendamento.php">Agende-se</a>';
+                    } else {
+                        // Se não estiver logado, redireciona para a página de login
+                        echo '<a class="btn-link" href="includes/login.php">Faça login para agendar</a>';
+                    }
+                    ?>
+                </button>
             </p>
         </div>
     </div>
