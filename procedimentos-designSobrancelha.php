@@ -2,13 +2,13 @@
 session_start();
 include '.\includes\header.php';
 
-// Verifica se o usuário está logado
-if (!isset($_SESSION['email'])) {
-    // Se não estiver logado, redireciona para o login, passando o endereço atual na URL
-    $currentPage = "procedimentos-nanoLips.php"; // Nome da página atual
-    header("Location: includes/login.php?redirect=$currentPage");
-    exit();
-}
+// // Verifica se o usuário está logado
+// if (!isset($_SESSION['email'])) {
+//     // Se não estiver logado, redireciona para o login, passando o endereço atual na URL
+//     $currentPage = "procedimentos-nanoLips.php"; // Nome da página atual
+//     header("Location: includes/login.php?redirect=$currentPage");
+//     exit();
+// }
 ?>
 
 <section class="tecnica">
