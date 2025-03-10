@@ -37,8 +37,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 VALUES ('$userId', '$procedimento', '$data', '$hora')";
        
         if ($conexao->query($sql) === TRUE) {
-            echo "<p>Agendamento realizado com sucesso!</p>";
-            echo "<button class='botao-sair'><a href='/pi_programacao'>Sair</a></button>";
+            header("Location: sucesso.php");
+            exit;
+            // echo "<p>Agendamento realizado com sucesso!</p>";
+            // echo "<button class='botao-sair'><a href='/pi_programacao'>Sair</a></button>";
         } else {
             echo "<p>Erro ao agendar: " . $conexao->error . "</p>";
         }

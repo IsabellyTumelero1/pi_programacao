@@ -140,7 +140,7 @@
                     </div>
                     <br>
 
-                    <p>Sexo:</p>
+                    <p>Genêro:</p>
                     <input type="radio" name="genero" id="feminino" value="feminino" required>
                     <label for="feminino">Feminino</label>
                     <br>
