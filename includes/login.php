@@ -92,7 +92,7 @@ if (isset($_POST['submit']) && !empty($_POST['email']) && !empty($_POST['senha']
         }
 
         .btn-custom:hover {
-            background-color:var(--color-rosa-intermediario);
+            background-color: var(--color-rosa-intermediario);
         }
 
         .cadastrar a {
@@ -101,7 +101,7 @@ if (isset($_POST['submit']) && !empty($_POST['email']) && !empty($_POST['senha']
         }
 
         .cadastrar a:hover {
-            color:var(--color-rosa-escuro);
+            color: var(--color-rosa-escuro);
         }
     </style>
 </head>

@@ -1,24 +1,24 @@
 <?php
-    if(isset($_POST['submit'])){
-        //TESTE
-        // print_r($_POST['nome']);
-        // print_r($_POST['email']);
-        // print_r($_POST['telefone']);
-        // print_r($_POST['genero']);
+if (isset($_POST['submit'])) {
+    //TESTE
+    // print_r($_POST['nome']);
+    // print_r($_POST['email']);
+    // print_r($_POST['telefone']);
+    // print_r($_POST['genero']);
 
-        include_once('config.php');
+    include_once('config.php');
 
-        $nome = $_POST['nome'];
-        $senha = $_POST['senha'];
-        $email = $_POST['email'];
-        $telefone = $_POST['telefone'];
-        $genero = $_POST['genero'];
+    $nome = $_POST['nome'];
+    $senha = $_POST['senha'];
+    $email = $_POST['email'];
+    $telefone = $_POST['telefone'];
+    $genero = $_POST['genero'];
 
-        $result = mysqli_query($conexao, "INSERT INTO usuarios(nome, senha, email, telefone, genero) 
+    $result = mysqli_query($conexao, "INSERT INTO usuarios(nome, senha, email, telefone, genero) 
         VALUES('$nome', '$senha', '$email', '$telefone', '$genero')");
-        
-        header('Location: login.php'); //redireciona para tela de login
-    }
+
+    header('Location: login.php'); //redireciona para tela de login
+}
 ?>
 
 <!DOCTYPE html>
@@ -45,7 +45,7 @@
             background-color: var(--color-rosa-escuro);
         }
 
-        .box{
+        .box {
             position: absolute;
             top: 50%;
             left: 50%;
@@ -56,11 +56,11 @@
             width: 20%;
         }
 
-        fieldset{
+        fieldset {
             border: 2px solid var(--color-rosa-escuro);
         }
 
-        legend{
+        legend {
             border: 1px solid var(--color-rosa-intermediario);
             padding: 10px;
             text-align: center;
@@ -69,11 +69,11 @@
             color: black;
         }
 
-        .inputBox{
+        .inputBox {
             position: relative;
         }
 
-        .inputUser{
+        .inputUser {
             background: none;
             border: none;
             border-bottom: 1px solid var(--color-rosa-escuro);
@@ -82,7 +82,7 @@
             width: 100%;
         }
 
-        .labelInput{
+        .labelInput {
             position: absolute;
             top: 0px;
             left: 0px;
@@ -90,14 +90,14 @@
             transition: .5s;
         }
 
-        .inputUser:focus ~ .labelInput,
-        .inputUser:valid ~ .labelInput{
+        .inputUser:focus~.labelInput,
+        .inputUser:valid~.labelInput {
             top: -20px;
             font-size: 12px;
             color: var(--color-rosa-escuro);
         }
 
-        #submit{
+        #submit {
             background-color: var(--color-rosa-escuro);
             width: 100%;
             border: none;
@@ -108,7 +108,7 @@
             border-radius: 10px;
         }
 
-        #submit:hover{
+        #submit:hover {
             background-color: #d88f92;
         }
     </style>
