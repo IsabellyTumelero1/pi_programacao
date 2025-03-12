@@ -28,6 +28,7 @@
 
         section.quemSou {
             padding: 80px 4%;
+            background-color: var(--color-rosa-intermediario);
         }
 
         .flex {
@@ -64,6 +65,10 @@
             border: none;
             border-radius: 10px;
             cursor: pointer;
+        }
+
+        section.sobre{
+            background-color: var(--color-rosa-escuro);
         }
 
         .img-portfolio {
@@ -108,6 +113,7 @@
 
         section.sobre {
             padding: 80px 4%;
+            background-color: var(--color-rosa-intermediario);
         }
 
         section.sobre .flex {
@@ -133,7 +139,6 @@
 
         section.portfolio {
             padding: 80px 4%;
-            box-shadow: 0 0 40px 10px #e9a0a17a;
         }
 
         section.portfolio .flex {
@@ -177,7 +182,7 @@
             justify-content: center;
             font-size: 25px;
             font-weight: 600;
-            color: var(--color-white);
+            color: var(--color-rosa-claro);
             opacity: 0;
             transition: .5s;
         }
