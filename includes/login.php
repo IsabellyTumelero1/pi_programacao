@@ -78,12 +78,7 @@ if (isset($_POST['submit']) && !empty($_POST['email']) && !empty($_POST['senha']
             border-radius: 40px;
             border: 2px solid var(--color-rosa-escuro);
         }
-
-        /* .form-control:focus {
-            border-color: #e74c3c;
-            box-shadow: 0 0 5px rgba(231, 76, 60, 0.5);
-        } */
-
+        
         .btn-custom {
             border-radius: 20px;
             font-weight: 600;
