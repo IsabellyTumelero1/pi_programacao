@@ -22,15 +22,14 @@ if (isset($_POST['submit'])) {
 ?>
 
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
-</head>
-
-<body>
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         :root {
             --color-rosa-claro: #F3E4E4;
@@ -40,122 +39,99 @@ if (isset($_POST['submit'])) {
             --color-white: #F2ECE4;
         }
 
-        .cadastro {
-            height: 100vh;
-            background-color: var(--color-rosa-escuro);
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: var(--color-rosa-intermediario);
         }
 
-        .box {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: white;
-            padding: 15px;
-            border-radius: 15px;
-            width: 20%;
+        .form-container {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+            color: #333;
         }
 
-        fieldset {
+        .form-container h2 {
+            color: var(--color-black);
+        }
+
+        .form-control {
+            border-radius: 40px;
             border: 2px solid var(--color-rosa-escuro);
         }
 
-        legend {
-            border: 1px solid var(--color-rosa-intermediario);
-            padding: 10px;
-            text-align: center;
+        .btn-custom {
+            border-radius: 20px;
+            font-weight: 600;
             background-color: var(--color-rosa-escuro);
-            border-radius: 8px;
-            color: black;
+            color: white;
         }
 
-        .inputBox {
-            position: relative;
+        .btn-custom:hover {
+            background-color: var(--color-rosa-intermediario);
         }
 
-        .inputUser {
-            background: none;
-            border: none;
-            border-bottom: 1px solid var(--color-rosa-escuro);
-            outline: none;
-            font-size: 15px;
-            width: 100%;
+        .cadastrar a {
+            color: var(--color-black);
+            text-decoration: none;
         }
 
-        .labelInput {
-            position: absolute;
-            top: 0px;
-            left: 0px;
-            pointer-events: none;
-            transition: .5s;
-        }
-
-        .inputUser:focus~.labelInput,
-        .inputUser:valid~.labelInput {
-            top: -20px;
-            font-size: 12px;
+        .cadastrar a:hover {
             color: var(--color-rosa-escuro);
         }
-
-        #submit {
-            background-color: var(--color-rosa-escuro);
-            width: 100%;
-            border: none;
-            padding: 15px;
-            color: white;
-            font-size: 15px;
-            cursor: pointer;
-            border-radius: 10px;
-        }
-
-        #submit:hover {
-            background-color: #d88f92;
-        }
     </style>
+</head>
 
-    <section class="cadastro">
-        <div class="box">
-            <form action="cadastro.php" method="POST">
-                <fieldset>
-                    <legend><b>Formulário de Cadastro</b></legend>
-                    <br>
-                    <div class="inputBox">
-                        <input type="text" name="nome" id="nome" class="inputUser" required>
-                        <label for="nome" class="labelInput">Nome Completo</label>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <div class="form-container text-center">
+                    <h2>Cadastro</h2>
+                    <form action="cadastro.php" method="POST" class="mt-4">
+                        <div class="mb-3">
+                            <input type="text" name="nome" class="form-control" placeholder="Nome Completo" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" name="email" class="form-control" placeholder="E-mail" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="tel" name="telefone" class="form-control" placeholder="Telefone" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="password" name="senha" class="form-control" placeholder="Senha" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Gênero</label>
+                            <div class="d-flex justify-content-between">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="genero" id="feminino" value="feminino" required>
+                                    <label class="form-check-label" for="feminino">Feminino</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="genero" id="masculino" value="masculino" required>
+                                    <label class="form-check-label" for="masculino">Masculino</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="genero" id="outro" value="outro" required>
+                                    <label class="form-check-label" for="outro">Outro</label>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" name="submit" class="btn btn-custom w-100">Cadastrar</button>
+                    </form>
+                    <div class="mt-3 cadastrar">
+                        <a href="login.php">Já tem uma conta? Faça login</a>
                     </div>
-                    <br><br>
-                    <div class="inputBox">
-                        <input type="password" name="senha" id="senha" class="inputUser" required>
-                        <label for="senha" class="labelInput">Senha</label>
-                    </div>
-                    <br><br>
-                    <div class="inputBox">
-                        <input type="text" name="email" id="email" class="inputUser" required>
-                        <label for="email" class="labelInput">Email</label>
-                    </div>
-                    <br><br>
-                    <div class="inputBox">
-                        <input type="tel" name="telefone" id="telefone" class="inputUser" required>
-                        <label for="telefone" class="labelInput">Telefone</label>
-                    </div>
-                    <br>
-
-                    <p>Genêro:</p>
-                    <input type="radio" name="genero" id="feminino" value="feminino" required>
-                    <label for="feminino">Feminino</label>
-                    <br>
-                    <input type="radio" name="genero" id="masculino" value="masculino" required>
-                    <label for="masculino">Masculino</label>
-                    <br>
-                    <input type="radio" name="genero" id="outro" value="outro" required>
-                    <label for="outro">Outro</label>
-                    <br><br>
-
-                    <input type="submit" id="submit" name="submit">
-                </fieldset>
-            </form>
+                </div>
+            </div>
         </div>
-    </section>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
