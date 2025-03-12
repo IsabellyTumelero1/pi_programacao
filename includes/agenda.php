@@ -27,7 +27,7 @@ $result = $conexao->query($sql);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minha Agenda</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
 </head>
 
 <body>
@@ -35,7 +35,7 @@ $result = $conexao->query($sql);
         /* Estilo da página "Minha Agenda" */
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
+            background-color: #E99F9F6E;
             margin: 0;
             padding: 0;
         }
@@ -177,6 +177,7 @@ $result = $conexao->query($sql);
                         <th>Data</th>
                         <th>Procedimento</th>
                         <th>Hora</th>
+                        <th>Desmarcar</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -185,6 +186,12 @@ $result = $conexao->query($sql);
                             <td><?php echo date('d/m/Y', strtotime($row['data'])); ?></td>
                             <td><?php echo $row['procedimento']; ?></td>
                             <td><?php echo $row['hora']; ?></td>
+                            <td>
+                            <a href="excluir-agendamento.php?id=<?php echo $row['id']; ?>"
+                                onclick="return confirm('Tem certeza que deseja desmarcar este agendamento?');">
+                                <img src="../assets/img/img-lixeira.png" alt="Desmarcar" width="30">
+                            </a>
+                        </td>
                         </tr>
                     <?php endwhile; ?>
                 </tbody>

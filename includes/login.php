@@ -43,7 +43,7 @@ if (isset($_POST['submit']) && !empty($_POST['email']) && !empty($_POST['senha']
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="shortcut icon" href="assets\img\favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets\img\favicon.ico" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         :root {
@@ -59,7 +59,7 @@ if (isset($_POST['submit']) && !empty($_POST['email']) && !empty($_POST['senha']
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            background-color: var(--color-rosa-escuro);
+            background-color: var(--color-rosa-intermediario);
         }
 
         .form-container {
@@ -71,18 +71,13 @@ if (isset($_POST['submit']) && !empty($_POST['email']) && !empty($_POST['senha']
         }
 
         .form-container h2 {
-            color: var(--color-rosa-escuro);
+            color: var(--color-black);
         }
 
         .form-control {
             border-radius: 40px;
             border: 2px solid var(--color-rosa-escuro);
         }
-
-        /* .form-control:focus {
-            border-color: #e74c3c;
-            box-shadow: 0 0 5px rgba(231, 76, 60, 0.5);
-        } */
 
         .btn-custom {
             border-radius: 20px;
@@ -125,7 +120,7 @@ if (isset($_POST['submit']) && !empty($_POST['email']) && !empty($_POST['senha']
                         <div class="mb-3">
                             <input type="password" name="senha" class="form-control" placeholder="Senha" required>
                         </div>
-                        <button type="submit" name="submit" class="btn btn-custom w-100">Logar</button>
+                        <button type="submit" name="submit" class="btn btn-custom w-100">Entrar</button>
                     </form>
                     <div class="mt-3 cadastrar">
                         <a href="cadastro.php">Ainda não se cadastrou?</a>
