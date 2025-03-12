@@ -177,6 +177,7 @@ $result = $conexao->query($sql);
                         <th>Data</th>
                         <th>Procedimento</th>
                         <th>Hora</th>
+                        <th>Desagendar</th>
                     </tr>
                 </thead>
                 <tbody>
