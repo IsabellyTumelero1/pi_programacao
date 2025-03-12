@@ -43,7 +43,7 @@ if (isset($_POST['submit']) && !empty($_POST['email']) && !empty($_POST['senha']
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="shortcut icon" href="assets\img\favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets\img\favicon.ico" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         :root {
@@ -78,7 +78,7 @@ if (isset($_POST['submit']) && !empty($_POST['email']) && !empty($_POST['senha']
             border-radius: 40px;
             border: 2px solid var(--color-rosa-escuro);
         }
-        
+
         .btn-custom {
             border-radius: 20px;
             font-weight: 600;
