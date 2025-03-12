@@ -83,6 +83,11 @@ if (isset($_POST['submit'])) {
         .cadastrar a:hover {
             color: var(--color-rosa-escuro);
         }
+
+        .erro {
+            color: red;
+            font-size: 12px;
+        }
     </style>
 </head>
 
@@ -94,19 +99,24 @@ if (isset($_POST['submit'])) {
                     <h2>Cadastro</h2>
                     <form action="cadastro.php" method="POST" class="mt-4">
                         <div class="mb-3">
-                            <input type="text" name="nome" class="form-control" placeholder="Nome Completo" required>
+                            <input type="text" id="nome" name="nome" class="form-control" placeholder="Nome Completo" required>
+                            <span class="erro" id="mensagem-erro-nome"></span>
                         </div>
                         <div class="mb-3">
-                            <input type="email" name="email" class="form-control" placeholder="E-mail" required>
+                            <input type="email" id="email" name="email" class="form-control" placeholder="E-mail" required>
+                            <span class="erro" id="mensagem-erro-email">
                         </div>
                         <div class="mb-3">
-                            <input type="tel" name="telefone" class="form-control" placeholder="Telefone" required>
+                            <input type="tel" id="telefone" name="telefone" class="form-control" placeholder="Telefone" required>
+                            <span class="erro" id="mensagem-erro-telefone">
                         </div>
                         <div class="mb-3">
-                            <input type="password" name="senha" class="form-control" placeholder="Senha" required>
+                            <input type="password" id="senha" name="senha" class="form-control" placeholder="Senha" required>
+                            <span class="erro" id="mensagem-erro-senha">
                         </div>
                         <div class="mb-3">
-                            <input type="password" name="confirmarSenha" class="form-control" placeholder="Confirmar Senha" required>
+                            <input type="password" id="confSenha" name="confirmarSenha" class="form-control" placeholder="Confirmar Senha" required>
+                            <span class="erro" id="mensagem-erro-confSenha">
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Gênero</label>
@@ -124,6 +134,8 @@ if (isset($_POST['submit'])) {
                                     <label class="form-check-label" for="outro">Outro</label>
                                 </div>
                             </div>
+                            <span class="erro" id="mensagem-erro-genero">
+
                         </div>
                         <button type="submit" name="submit" class="btn btn-custom w-100">Cadastrar</button>
                     </form>
@@ -135,6 +147,205 @@ if (isset($_POST['submit'])) {
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function fnValidarMinimoDeCaracteres(minimo_de_caracteres, valor_do_campo) {
+            if (valor_do_campo.length < minimo_de_caracteres) {
+                return false;
+            } else {
+                return true;
+            }
+        }
+ 
+        function fnValidarCampoObrigatorio(valor_do_campo) {
+            if (valor_do_campo.trim().length == 0) {
+                return false;
+            } else {
+                return true;
+            }
+        }
+ 
+        function fnAdicionarMensagemDeErro(id_mensagem, mensagem) {
+            if (mensagem == "limpar") {
+                document.getElementById(id_mensagem).style.display = "none";
+                document.getElementById(id_mensagem).innerHTML = "";
+                return;
+            }
+ 
+            document.getElementById(id_mensagem).style.display = "block";
+            if (document.getElementById(id_mensagem).innerHTML == "")
+                document.getElementById(id_mensagem).innerHTML = mensagem
+            else {
+                document.getElementById(id_mensagem).innerHTML += "<br>" + mensagem
+            }
+        }
+ 
+        function fnValidarSenhaIgual(confirmar_senha, senha) {
+            if (confirmar_senha != senha) {
+                return false;
+            } else {
+                return true;
+            }
+        }
+ 
+        function fnValidarSenhaMaiuscula(senha) {
+            let regex = /[A-Z]/;
+            if (regex.test(senha)) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+ 
+        function fnValidarSenhaCaracterEspecial(senha) {
+            let regex = /[^a-zA-Z0-9]/;
+            if (regex.test(senha)) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+ 
+        function fnValidarEmail(email) {
+            let regex = /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+(\.[a-z]+)?$/;
+            if (regex.test(email)) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+ 
+        // Função de validação para o campo de gênero
+        function fnValidarGenero(generoRadios, mensagemErroId) {
+            // Verificar se algum botão de rádio foi selecionado
+            let generoSelecionado = false;
+ 
+            for (let i = 0; i < generoRadios.length; i++) {
+                if (generoRadios[i].checked) {
+                    generoSelecionado = true;
+                    break;
+                }
+            }
+ 
+            if (!generoSelecionado) {
+                fnAdicionarMensagemDeErro(mensagemErroId, "* Campo obrigatório");
+            } else {
+                fnAdicionarMensagemDeErro(mensagemErroId, "limpar");
+            }
+        }
+ 
+ 
+        document.getElementById("nome").addEventListener("blur", function() {
+            fnAdicionarMensagemDeErro("mensagem-erro-nome", "limpar");
+ 
+            let nomevalido = fnValidarMinimoDeCaracteres(3, this.value);
+            if (nomevalido == false) {
+                fnAdicionarMensagemDeErro("mensagem-erro-nome", "* No mínimo 3 caracteres");
+            }
+ 
+            let nomeobrigatorio = fnValidarCampoObrigatorio(this.value);
+            if (nomeobrigatorio == false) {
+                fnAdicionarMensagemDeErro("mensagem-erro-nome", "* Campo obrigatório");
+            }
+        })
+ 
+        document.getElementById("senha").addEventListener("blur", function() {
+            fnAdicionarMensagemDeErro("mensagem-erro-senha", "limpar");
+ 
+            let senhavalida = fnValidarMinimoDeCaracteres(8, this.value)
+            if (senhavalida == false) {
+                fnAdicionarMensagemDeErro("mensagem-erro-senha", "* No mínimo 8 caracteres");
+            }
+ 
+            let confSenhaigual = fnValidarSenhaIgual(this.value);
+            if (confSenhaigual == false) {
+                fnAdicionarMensagemDeErro("mensagem-erro-confSenha", "* Senha incompatível");
+            }
+ 
+            let senhaobrigatoria = fnValidarCampoObrigatorio(this.value);
+            if (senhaobrigatoria == false) {
+                fnAdicionarMensagemDeErro("mensagem-erro-senha", "* Campo obrigatório");
+            }
+ 
+            let senhamaiuscula = fnValidarSenhaMaiuscula(this.value);
+            if (senhamaiuscula == false) {
+                fnAdicionarMensagemDeErro("mensagem-erro-senha", "* Obrigatório letra maiúscula");
+            }
+ 
+            let caracterespecial = fnValidarSenhaCaracterEspecial(this.value);
+            if (caracterespecial == false) {
+                fnAdicionarMensagemDeErro("mensagem-erro-senha", "* Obrigatório caracter especial")
+            }
+        })
+ 
+        document.getElementById("confirmar_senha").addEventListener("blur", function() {
+            fnAdicionarMensagemDeErro("mensagem-erro-confSenha", "limpar");
+ 
+            let confSenhaigual = fnValidarSenhaIgual(this.getElementById("senha").value);
+            if (confSenhaigual == false) {
+                fnAdicionarMensagemDeErro("mensagem-erro-confSenha", "* Senha incompatível");
+            }
+ 
+            let confSenhavalida = fnValidarMinimoDeCaracteres(8, this.value)
+            if (confSenhavalida == false) {
+                fnAdicionarMensagemDeErro("mensagem-erro-confSenha", "* No mínimo 8 caracteres");
+            }
+ 
+            let confSenhaobrigatoria = fnValidarCampoObrigatorio(this.value);
+            if (confSenhaobrigatoria == false) {
+                fnAdicionarMensagemDeErro("mensagem-erro-confSenha", "* Campo obrigatório");
+            }
+ 
+        })
+ 
+        document.getElementById("email").addEventListener("blur", function() {
+            fnAdicionarMensagemDeErro("mensagem-erro-email", "limpar");
+ 
+            let emailvalido = fnValidarMinimoDeCaracteres(5, this.value);
+            if (emailvalido == false) {
+                fnAdicionarMensagemDeErro("mensagem-erro-email", "* No mínimo 5 caracteres");
+            }
+ 
+            let emailobrigatorio = fnValidarCampoObrigatorio(this.value);
+            if (emailobrigatorio == false) {
+                fnAdicionarMensagemDeErro("mensagem-erro-email", "* Campo obrigatório");
+            }
+ 
+            let validacaoemail = fnValidarEmail(this.value);
+            if (validacaoemail == false) {
+                fnAdicionarMensagemDeErro("mensagem-erro-email", "* E-mail inválido");
+                this.value = "";
+            }
+        })
+ 
+        document.getElementById("telefone").addEventListener("blur", function() {
+            fnAdicionarMensagemDeErro("mensagem-erro-telefone", "limpar");
+ 
+            let telefonevalido = fnValidarMinimoDeCaracteres(10, this.value)
+            if (telefonevalido == false) {
+                fnAdicionarMensagemDeErro("mensagem-erro-telefone", "* No mínimo 10 caracteres");
+            }
+ 
+            let telefoneobrigatorio = fnValidarCampoObrigatorio(this.value);
+            if (telefoneobrigatorio == false) {
+                fnAdicionarMensagemDeErro("mensagem-erro-telefone", "* Campo obrigatório");
+            }
+        })
+ 
+        document.getElementById("feminino").addEventListener("blur", function() {
+            const generoRadios = document.getElementsByName("genero");
+            fnValidarGenero(generoRadios, "mensagem-erro-genero");
+        });
+ 
+        document.getElementById("masculino").addEventListener("blur", function() {
+            const generoRadios = document.getElementsByName("genero");
+            fnValidarGenero(generoRadios, "mensagem-erro-genero");
+        });
+ 
+        document.getElementById("outro").addEventListener("blur", function() {
+            const generoRadios = document.getElementsByName("genero");
+            fnValidarGenero(generoRadios, "mensagem-erro-genero");
+        });
+    </script>
 </body>
 
 </html>
