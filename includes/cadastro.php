@@ -106,6 +106,9 @@ if (isset($_POST['submit'])) {
                             <input type="password" name="senha" class="form-control" placeholder="Senha" required>
                         </div>
                         <div class="mb-3">
+                            <input type="password" name="confirmarSenha" class="form-control" placeholder="Confirmar Senha" required>
+                        </div>
+                        <div class="mb-3">
                             <label class="form-label">Gênero</label>
                             <div class="d-flex justify-content-between">
                                 <div class="form-check">
