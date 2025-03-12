@@ -38,6 +38,7 @@
                         echo "<li><a href='#'>{$_SESSION['nome']}</a>";
                         echo "<ul class='dropdown'>";
                         echo "<li><a href='includes/logout.php'>Logout</a></li>";
+                        echo "<li><a href='includes/agenda.php'>Minha agenda</a></li>";
                         echo "</ul>";
                         echo "</li>";
                     }
