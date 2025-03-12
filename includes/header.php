@@ -18,7 +18,7 @@
             <nav>
                 <ul class="menu">
                     <li><a href="index.php">Home</a></li>
-                    <li><a href="#">Quem somos</a></li>
+                    <li><a href="quemSou.php">Quem somos</a></li>
                     <li><a href="#">Procedimentos</a>
                         <ul class="dropdown">
                             <li><a href="procedimentos-nanoLips.php">Nano Lips</a></li>
