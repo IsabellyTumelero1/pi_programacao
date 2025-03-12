@@ -59,7 +59,7 @@ if (isset($_POST['submit']) && !empty($_POST['email']) && !empty($_POST['senha']
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            background-color: var(--color-rosa-escuro);
+            background-color: var(--color-rosa-intermediario);
         }
 
         .form-container {
@@ -71,7 +71,7 @@ if (isset($_POST['submit']) && !empty($_POST['email']) && !empty($_POST['senha']
         }
 
         .form-container h2 {
-            color: var(--color-rosa-escuro);
+            color: var(--color-black);
         }
 
         .form-control {
@@ -125,7 +125,7 @@ if (isset($_POST['submit']) && !empty($_POST['email']) && !empty($_POST['senha']
                         <div class="mb-3">
                             <input type="password" name="senha" class="form-control" placeholder="Senha" required>
                         </div>
-                        <button type="submit" name="submit" class="btn btn-custom w-100">Logar</button>
+                        <button type="submit" name="submit" class="btn btn-custom w-100">Entrar</button>
                     </form>
                     <div class="mt-3 cadastrar">
                         <a href="cadastro.php">Ainda não se cadastrou?</a>

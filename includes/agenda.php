@@ -35,7 +35,7 @@ $result = $conexao->query($sql);
         /* Estilo da página "Minha Agenda" */
         body {
             font-family: Arial, sans-serif;
-            background-color:#F3E4E4;
+            background-color:#E99F9F6E;
             margin: 0;
             padding: 0;
         }
