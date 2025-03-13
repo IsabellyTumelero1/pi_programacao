@@ -9,7 +9,7 @@
 .tecnica {
     display: flex;
     flex-direction: column;
-    background-color: var(--color-rosa-claro);
+    background-color: var(--color-rosa-intermediario);
 }
 
 .titulo-tecnica {

@@ -28,7 +28,7 @@
                             <li><a href="procedimentos-laser.php">Laser</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">Micro do Bem</a></li>
+                    <li><a href="microdobem.php">Micro do Bem</a></li>
                     <?php
                     if (!isset($_SESSION['email'])) {
                         // Se o usuário não estiver logado, exibe o link de login
