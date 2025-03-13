@@ -84,6 +84,10 @@
             border-top: 1px solid var(--color-rosa-escuro);
         }
 
+        /* section.micro-dobem3{
+            
+        } */
+
     </style>
     <section class="micro-do-bem">
         <div class="flex-doBem">
@@ -134,11 +138,36 @@
             </div>
         </div>                
     </section>
-    <section class="">
-        <div class="flex-doBem">
-            <div class="">
-
+    <section class="micro-do-bem3">
+        <h1>Feedback</h1>
+        <div class="feedback">
+            
+        <div class="feedback-container">
+            <div class="feedback-comentario">
+            <p>
+                Mussum Ipsum, cacilds vidis litro abertis. Per aumento de cachacis, eu reclamis. Todo mundo vê os porris que eu tomo, mas ninguém vê os tombis que eu levo! Suco de cevadiss deixa as pessoas mais interessantis. Admodum accumsan disputationi eu sit. Vide electram sadipscing et per.
+                
+            </p>
+            <p class="nome">
+                - Mussum
+            </p>
             </div>
+            <div class="feedback-comentario">
+            <p>
+
+            </p>
+            <p class="nome">
+
+            </p>
+            </div>
+            <div class="feedback-comentario">
+            <p>
+
+            </p>
+            <p class="nome">
+
+            </p>
+            </div>          
         </div>
     </section>
 </body>
