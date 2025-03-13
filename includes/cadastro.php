@@ -13,9 +13,10 @@ if (isset($_POST['submit'])) {
     $email = $_POST['email'];
     $telefone = $_POST['telefone'];
     $genero = $_POST['genero'];
+    $confirmarSenha = $_POST['confirmarSenha'];
 
-    $result = mysqli_query($conexao, "INSERT INTO usuarios(nome, senha, email, telefone, genero) 
-        VALUES('$nome', '$senha', '$email', '$telefone', '$genero')");
+    $result = mysqli_query($conexao, "INSERT INTO usuarios(nome, senha, email, telefone, genero, confirmarSenha) 
+        VALUES('$nome', '$senha', '$email', '$telefone', '$genero', '$confirmarSenha')");
 
     header('Location: login.php'); //redireciona para tela de login
 }
