@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="assets\css\carrossel.css">
+<link rel="stylesheet" href="assets/css/carrossel.css">
 
 <section>
     <h2 class="titulo">Procedimentos</h2>
@@ -6,13 +6,13 @@
     <div class="carrossel">
         <div class="carrossel-container">
             <div class="carrossel-procedimento">
-                <img src="assets\img\1.jpg" alt="Procedimento 1">
+                <img src="assets/img/1.jpg" alt="Procedimento 1">
             </div>
             <div class="carrossel-procedimento">
-                <img src="assets\img\2.jpg" alt="Procedimento 2">
+                <img src="assets/img/2.jpg" alt="Procedimento 2">
             </div>
             <div class="carrossel-procedimento">
-                <img src="assets\img\3.jpg" alt="Procedimento 3">
+                <img src="assets/img/3.jpg" alt="Procedimento 3">
             </div>
         </div>
 
@@ -26,7 +26,5 @@
             <span class="dot" onclick="goToSlide(1)"></span>
             <span class="dot" onclick="goToSlide(2)"></span>
         </div>
-
-        <!-- <button><a href="">Saiba Mais</a></button> -->
     </div>
 </section>

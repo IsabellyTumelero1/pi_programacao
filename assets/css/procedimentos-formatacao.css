@@ -9,7 +9,7 @@
 .tecnica {
     display: flex;
     flex-direction: column;
-    background-color: var(--color-rosa-claro);
+    background-color: var(--color-rosa-intermediario);
 }
 
 .titulo-tecnica {
@@ -38,13 +38,6 @@
     margin-left: 30px;
 }
 
-/* .descricao-tecnica{
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    align-items: center;
-} */
-
 .conteudo-descricao {
     height: 500px;
     width: 800px;
@@ -72,7 +65,3 @@
 .texto-tecnica{
     margin-bottom: 20px;
 }
-
-/* button:hover{
-    transform: ;
-} */
