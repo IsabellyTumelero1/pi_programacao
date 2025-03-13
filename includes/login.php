@@ -35,7 +35,6 @@ if (isset($_POST['submit']) && !empty($_POST['email']) && !empty($_POST['senha']
 }
 ?>
 
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -98,6 +97,22 @@ if (isset($_POST['submit']) && !empty($_POST['email']) && !empty($_POST['senha']
         .cadastrar a:hover {
             color: var(--color-rosa-escuro);
         }
+
+        /* Estilos para o botão de voltar */
+        .btn-voltar {
+            font-weight: 600;
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: var(--color-rosa-escuro)
+        }
+
+        .btn-voltar:hover{
+            background-color: var(--color-rosa-intermediario);
+        }
     </style>
 </head>
 
@@ -129,6 +144,10 @@ if (isset($_POST['submit']) && !empty($_POST['email']) && !empty($_POST['senha']
             </div>
         </div>
     </div>
+    
+    <!-- Botão de Voltar -->
+    <button class="btn btn-secondary btn-voltar" onclick="window.history.back();">Voltar</button>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
