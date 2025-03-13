@@ -26,7 +26,7 @@ $result = $conexao->query($sql);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minha Agenda</title>
+    <title>Agenda</title>
     <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
 </head>
 
@@ -168,7 +168,7 @@ $result = $conexao->query($sql);
     </style>
 
     <div class="container">
-        <h1>Minha Agenda</h1>
+        <h1>Agenda</h1>
 
         <?php if ($result->num_rows > 0): ?>
             <table>
