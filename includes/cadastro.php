@@ -150,202 +150,119 @@ if (isset($_POST['submit'])) {
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         function fnValidarMinimoDeCaracteres(minimo_de_caracteres, valor_do_campo) {
-            if (valor_do_campo.length < minimo_de_caracteres) {
-                return false;
-            } else {
-                return true;
-            }
+            return valor_do_campo.length >= minimo_de_caracteres;
         }
- 
+
         function fnValidarCampoObrigatorio(valor_do_campo) {
-            if (valor_do_campo.trim().length == 0) {
-                return false;
-            } else {
-                return true;
-            }
+            return valor_do_campo.trim().length > 0;
         }
- 
+
         function fnAdicionarMensagemDeErro(id_mensagem, mensagem) {
-            if (mensagem == "limpar") {
-                document.getElementById(id_mensagem).style.display = "none";
-                document.getElementById(id_mensagem).innerHTML = "";
-                return;
-            }
- 
-            document.getElementById(id_mensagem).style.display = "block";
-            if (document.getElementById(id_mensagem).innerHTML == "")
-                document.getElementById(id_mensagem).innerHTML = mensagem
-            else {
-                document.getElementById(id_mensagem).innerHTML += "<br>" + mensagem
+            let elemento = document.getElementById(id_mensagem);
+            if (!elemento) return;
+
+            if (mensagem === "limpar") {
+                elemento.style.display = "none";
+                elemento.innerHTML = "";
+            } else {
+                elemento.style.display = "block";
+                elemento.innerHTML = mensagem;
             }
         }
- 
+
         function fnValidarSenhaIgual(confirmar_senha, senha) {
-            if (confirmar_senha != senha) {
-                return false;
-            } else {
-                return true;
-            }
+            return confirmar_senha === senha;
         }
- 
+
         function fnValidarSenhaMaiuscula(senha) {
-            let regex = /[A-Z]/;
-            if (regex.test(senha)) {
-                return true;
-            } else {
-                return false;
-            }
+            return /[A-Z]/.test(senha);
         }
- 
+
         function fnValidarSenhaCaracterEspecial(senha) {
-            let regex = /[^a-zA-Z0-9]/;
-            if (regex.test(senha)) {
-                return true;
-            } else {
-                return false;
-            }
+            return /[^a-zA-Z0-9]/.test(senha);
         }
- 
+
         function fnValidarEmail(email) {
-            let regex = /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+(\.[a-z]+)?$/;
-            if (regex.test(email)) {
-                return true;
-            } else {
-                return false;
-            }
+            let regex = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/i;
+            return regex.test(email);
         }
- 
-        // Função de validação para o campo de gênero
+
         function fnValidarGenero(generoRadios, mensagemErroId) {
-            // Verificar se algum botão de rádio foi selecionado
-            let generoSelecionado = false;
- 
-            for (let i = 0; i < generoRadios.length; i++) {
-                if (generoRadios[i].checked) {
-                    generoSelecionado = true;
-                    break;
-                }
-            }
- 
-            if (!generoSelecionado) {
-                fnAdicionarMensagemDeErro(mensagemErroId, "* Campo obrigatório");
-            } else {
-                fnAdicionarMensagemDeErro(mensagemErroId, "limpar");
-            }
+            let generoSelecionado = Array.from(generoRadios).some(radio => radio.checked);
+            fnAdicionarMensagemDeErro(mensagemErroId, generoSelecionado ? "limpar" : "* Campo obrigatório");
         }
- 
- 
+
+        // Eventos
         document.getElementById("nome").addEventListener("blur", function() {
             fnAdicionarMensagemDeErro("mensagem-erro-nome", "limpar");
- 
-            let nomevalido = fnValidarMinimoDeCaracteres(3, this.value);
-            if (nomevalido == false) {
+
+            if (!fnValidarMinimoDeCaracteres(3, this.value)) {
                 fnAdicionarMensagemDeErro("mensagem-erro-nome", "* No mínimo 3 caracteres");
             }
- 
-            let nomeobrigatorio = fnValidarCampoObrigatorio(this.value);
-            if (nomeobrigatorio == false) {
+            if (!fnValidarCampoObrigatorio(this.value)) {
                 fnAdicionarMensagemDeErro("mensagem-erro-nome", "* Campo obrigatório");
             }
-        })
- 
+        });
+
         document.getElementById("senha").addEventListener("blur", function() {
             fnAdicionarMensagemDeErro("mensagem-erro-senha", "limpar");
- 
-            let senhavalida = fnValidarMinimoDeCaracteres(8, this.value)
-            if (senhavalida == false) {
+
+            if (!fnValidarMinimoDeCaracteres(8, this.value)) {
                 fnAdicionarMensagemDeErro("mensagem-erro-senha", "* No mínimo 8 caracteres");
             }
- 
-            let confSenhaigual = fnValidarSenhaIgual(this.value);
-            if (confSenhaigual == false) {
-                fnAdicionarMensagemDeErro("mensagem-erro-confSenha", "* Senha incompatível");
+            if (!fnValidarSenhaMaiuscula(this.value)) {
+                fnAdicionarMensagemDeErro("mensagem-erro-senha", "* Deve conter pelo menos uma letra maiúscula");
             }
- 
-            let senhaobrigatoria = fnValidarCampoObrigatorio(this.value);
-            if (senhaobrigatoria == false) {
-                fnAdicionarMensagemDeErro("mensagem-erro-senha", "* Campo obrigatório");
+            if (!fnValidarSenhaCaracterEspecial(this.value)) {
+                fnAdicionarMensagemDeErro("mensagem-erro-senha", "* Deve conter pelo menos um caractere especial");
             }
- 
-            let senhamaiuscula = fnValidarSenhaMaiuscula(this.value);
-            if (senhamaiuscula == false) {
-                fnAdicionarMensagemDeErro("mensagem-erro-senha", "* Obrigatório letra maiúscula");
-            }
- 
-            let caracterespecial = fnValidarSenhaCaracterEspecial(this.value);
-            if (caracterespecial == false) {
-                fnAdicionarMensagemDeErro("mensagem-erro-senha", "* Obrigatório caracter especial")
-            }
-        })
- 
-        document.getElementById("confirmar_senha").addEventListener("blur", function() {
+        });
+
+        document.getElementById("confSenha").addEventListener("blur", function() {
             fnAdicionarMensagemDeErro("mensagem-erro-confSenha", "limpar");
- 
-            let confSenhaigual = fnValidarSenhaIgual(this.getElementById("senha").value);
-            if (confSenhaigual == false) {
+
+            let senha = document.getElementById("senha").value;
+            if (!fnValidarSenhaIgual(this.value, senha)) {
                 fnAdicionarMensagemDeErro("mensagem-erro-confSenha", "* Senha incompatível");
             }
- 
-            let confSenhavalida = fnValidarMinimoDeCaracteres(8, this.value)
-            if (confSenhavalida == false) {
-                fnAdicionarMensagemDeErro("mensagem-erro-confSenha", "* No mínimo 8 caracteres");
-            }
- 
-            let confSenhaobrigatoria = fnValidarCampoObrigatorio(this.value);
-            if (confSenhaobrigatoria == false) {
+            if (!fnValidarCampoObrigatorio(this.value)) {
                 fnAdicionarMensagemDeErro("mensagem-erro-confSenha", "* Campo obrigatório");
             }
- 
-        })
- 
+        });
+
         document.getElementById("email").addEventListener("blur", function() {
             fnAdicionarMensagemDeErro("mensagem-erro-email", "limpar");
- 
-            let emailvalido = fnValidarMinimoDeCaracteres(5, this.value);
-            if (emailvalido == false) {
+
+            if (!fnValidarMinimoDeCaracteres(5, this.value)) {
                 fnAdicionarMensagemDeErro("mensagem-erro-email", "* No mínimo 5 caracteres");
             }
- 
-            let emailobrigatorio = fnValidarCampoObrigatorio(this.value);
-            if (emailobrigatorio == false) {
+            if (!fnValidarCampoObrigatorio(this.value)) {
                 fnAdicionarMensagemDeErro("mensagem-erro-email", "* Campo obrigatório");
             }
- 
-            let validacaoemail = fnValidarEmail(this.value);
-            if (validacaoemail == false) {
+            if (!fnValidarEmail(this.value)) {
                 fnAdicionarMensagemDeErro("mensagem-erro-email", "* E-mail inválido");
                 this.value = "";
             }
-        })
- 
+        });
+
         document.getElementById("telefone").addEventListener("blur", function() {
             fnAdicionarMensagemDeErro("mensagem-erro-telefone", "limpar");
- 
-            let telefonevalido = fnValidarMinimoDeCaracteres(10, this.value)
-            if (telefonevalido == false) {
+
+            if (!fnValidarMinimoDeCaracteres(10, this.value)) {
                 fnAdicionarMensagemDeErro("mensagem-erro-telefone", "* No mínimo 10 caracteres");
             }
- 
-            let telefoneobrigatorio = fnValidarCampoObrigatorio(this.value);
-            if (telefoneobrigatorio == false) {
+            if (!fnValidarCampoObrigatorio(this.value)) {
                 fnAdicionarMensagemDeErro("mensagem-erro-telefone", "* Campo obrigatório");
             }
-        })
- 
-        document.getElementById("feminino").addEventListener("blur", function() {
-            const generoRadios = document.getElementsByName("genero");
-            fnValidarGenero(generoRadios, "mensagem-erro-genero");
         });
- 
-        document.getElementById("masculino").addEventListener("blur", function() {
-            const generoRadios = document.getElementsByName("genero");
-            fnValidarGenero(generoRadios, "mensagem-erro-genero");
-        });
- 
-        document.getElementById("outro").addEventListener("blur", function() {
-            const generoRadios = document.getElementsByName("genero");
-            fnValidarGenero(generoRadios, "mensagem-erro-genero");
+
+        // Validação do gênero
+        document.querySelectorAll("input[name='genero']").forEach(radio => {
+            radio.addEventListener("blur", function() {
+                fnValidarGenero(document.getElementsByName("genero"), "mensagem-erro-genero");
+            });
         });
     </script>
 </body>
+
 </html>
