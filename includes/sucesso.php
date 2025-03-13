@@ -41,7 +41,7 @@
         <h2 class="text-dark">Agendamento realizado!</h2>
         <p class="text-muted">Seu horário foi reservado com sucesso.</p>
         <a href="/pi_programacao" class="btn btn-custom text-white px-4 py-2">Sair</a>
-        <a href="agenda.php" class="btn btn-custom text-white px-4 py-2">Minha agenda</a>
+        <a href="agenda.php" class="btn btn-custom text-white px-4 py-2">Agenda</a>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
