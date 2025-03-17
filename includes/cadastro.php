@@ -1,11 +1,5 @@
 <?php
 if (isset($_POST['submit'])) {
-    //TESTE
-    // print_r($_POST['nome']);
-    // print_r($_POST['email']);
-    // print_r($_POST['telefone']);
-    // print_r($_POST['genero']);
-
     include_once('config.php');
 
     $nome = $_POST['nome'];
