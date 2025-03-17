@@ -98,7 +98,6 @@ if (isset($_POST['submit']) && !empty($_POST['email']) && !empty($_POST['senha']
             color: var(--color-rosa-escuro);
         }
 
-        /* Estilos para o botão de voltar */
         .btn-voltar {
             font-weight: 600;
             padding: 10px;
@@ -145,7 +144,6 @@ if (isset($_POST['submit']) && !empty($_POST['email']) && !empty($_POST['senha']
         </div>
     </div>
     
-    <!-- Botão de Voltar -->
     <button class="btn btn-custom btn-voltar" onclick="window.history.back();">Voltar</button>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

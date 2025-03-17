@@ -32,7 +32,6 @@ $result = $conexao->query($sql);
 
 <body>
     <style>
-        /* Estilo da página "Minha Agenda" */
         body {
             font-family: Arial, sans-serif;
             background-color: #E99F9F6E;
@@ -114,7 +113,6 @@ $result = $conexao->query($sql);
             background-color: rgb(248, 123, 125);
         }
 
-        /* Estilos Responsivos */
         @media screen and (max-width: 768px) {
             .container {
                 width: 95%;
