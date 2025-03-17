@@ -26,6 +26,12 @@
             display: flex; 
             gap: 100px; 
         }
+
+        .img-inicio-dobem{
+            width: 450px;
+            height: 500px;
+            border-radius: 15px;
+        }
         .txtInicio-doBem{
             border-top: 1px solid black;
             border-right: 1px solid black;   
@@ -92,12 +98,12 @@
     <section class="micro-do-bem">
         <div class="flex-doBem">
             <div class="OQueE-MicroDoBem">
-                <div class="img-inicio-dobem" style="min-height: 500px; max-height: 500px; min-width: 300px; max-width: 300px; border-radius: 15px; background-color: red;">
+                <div>
                     <!--trocar para a image definitiva-->
-                    <img src="">
+                    <img class="img-inicio-dobem" src="assets\img\cancer_mama.jpg">
                 </div>
                 <div class="txtInicio-doBem">
-                    <h2 >Micro do Bem</h2>
+                    <h2 >Micro do <span style="color: #ec7c7e;">Bem</span></h2>
                     <div class="txt-doBem">
                     <p>
                         Transformar a dor em esperança através da micropigmentação paramédica tem sido um propósito que me acompanha há alguns anos. 

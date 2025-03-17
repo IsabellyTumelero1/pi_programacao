@@ -198,7 +198,7 @@ $result = $conexao->query($sql);
             <p>Você ainda não tem procedimentos agendados.</p>
         <?php endif; ?>
     </div>
-    <button class='botao-voltar'><a href='/pi_programacao/index.php'>Voltar</a></button>
+    <button class='botao-voltar' onclick="window.history.back();">Voltar</button>
 </body>
 
 </html>
