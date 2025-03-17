@@ -74,7 +74,6 @@
     margin-bottom: 20px;
 }
 
-/* Responsividade para telas menores */
 @media (max-width: 768px) {
     .conteudo-tecnica {
         flex-direction: column;
