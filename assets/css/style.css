@@ -120,7 +120,7 @@ header .menu a:hover {
 }
 
 .feedback {
-    display: flex;
+    display: block;
     height: 80vh;
     background-color: var(--color-rosa-intermediario);
     margin: 0;
@@ -137,7 +137,8 @@ h1 {
 
 .feedback .feedback-container {
     display: flex;
-    height: 100vh;
+    margin-top: 260px;
+    /* height: 100vh; */
     width: 100vw;
     justify-content: space-around;
     align-items: center;
