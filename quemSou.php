@@ -1,4 +1,4 @@
-<?php 
+<?php
 session_start();
 include 'includes/header.php';
 ?>
@@ -10,9 +10,6 @@ include 'includes/header.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quem Sou Eu?</title>
-</head>
- 
-<body>
     <style>
         :root {
             --color-rosa-claro: #F3E4E4;
@@ -200,8 +197,48 @@ include 'includes/header.php';
         .overlay:hover {
             opacity: 1;
         }
-    </style>
  
+        @media screen and (max-width: 768px) {
+            section.portfolio .flex {
+                flex-direction: column;
+                gap: 20px;
+                align-items: center;
+            }
+ 
+            section.portfolio .img-port {
+                width: 100%;
+                height: 400px;
+                background-size: cover;
+                background-position: 100% 0%;
+                cursor: pointer;
+                border-radius: 20px;
+                transition: background-position 1s ease;
+                position: relative;
+            }
+ 
+            section.portfolio .img-port:hover {
+                background-position: 100% 100%;
+            }
+ 
+            .site1 {
+                background-image: url(assets/img/rolagem_sobrancelha.jpg);
+            }
+ 
+            .site2 {
+                background-image: url(assets/img/rolagem_boca.jpg);
+            } 
+            
+            @media screen and (max-width: 480px) {
+                section.portfolio .img-port {
+                    height: 250px;
+                    width: 100%;
+                }
+            }
+        }
+    </style>
+</head>
+ 
+<body>
     <section class="quemSou">
         <div class="interface">
             <div class="flex">
@@ -224,6 +261,7 @@ include 'includes/header.php';
             </div>
         </div>
     </section>
+ 
     <section class="especialidades">
         <div class="interface">
             <h2 style="text-align: center; font-size: 34px;">MINHAS <span style="color: #ec7c7e;">ESPECIALIDADES</span></h2>
@@ -249,7 +287,7 @@ include 'includes/header.php';
  
     <section class="sobre">
         <div class="flex">
-                <img class="img-sobre" src="assets/img/camila.jpg" alt="Camila">
+            <img class="img-sobre" src="assets/img/camila.jpg" alt="Camila">
             <div class="txt-sobre">
                 <h2>MUITO PRAZER, <span>CAMILA SANTI!</span></h2>
                 <p>Desde 2011, minha paixão pelo embelezamento e empoderamento feminino me guia em cada passo da minha jornada. Com graduação em Fisioterapia Dermatofuncional, encontrei minha verdadeira vocação nas sobrancelhas, um universo que me encanta e transforma vidas.</p>
@@ -273,9 +311,5 @@ include 'includes/header.php';
         </div>
     </section>
 </body>
- 
-</html>
- 
-<?php
-include '.\includes\footer.php';
-?>
+
+<?php include '.\includes\footer.php'; ?>
