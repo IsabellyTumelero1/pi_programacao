@@ -109,6 +109,8 @@
 
         .h2-doBem {
             margin: 0;
+            padding-top: 60px;
+            padding-bottom: 0px;
         }
 
         
