@@ -19,6 +19,11 @@
             --color-white: #F2ECE4;
         }
 
+        body{
+            margin: 0;
+            padding: 0;
+        }
+
         section.micro-do-bem {
             padding: 80px 10%;
             background-color: var(--color-rosa-intermediario);
@@ -141,7 +146,7 @@
                     </h2>
                     <div class="txt-doBem2">
                         <p>
-                            a mastectomia (cirurgia para remoção da mama). Diferente de uma tatuagem tradicional, este procedimento utiliza equipamentos e tintas desenvolvidas especialmente para esse tipo de trabalho, que são mais suaves e biocompatíveis com a pele.
+                            A mastectomia (cirurgia para remoção da mama). Diferente de uma tatuagem tradicional, este procedimento utiliza equipamentos e tintas desenvolvidas especialmente para esse tipo de trabalho, que são mais suaves e biocompatíveis com a pele.
                         </p>
                         <p><br>
                             O objetivo é criar uma aparência natural e harmônica, tanto em termos de cor quanto de textura, para que a reconstrução das aréolas seja o mais realista possível. Além de devolver a simetria e a beleza da região, a micropigmentação paramédica desempenha um papel importante na restauração da autoestima, promovendo uma nova percepção do corpo.
