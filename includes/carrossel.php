@@ -6,13 +6,19 @@
     <div class="carrossel">
         <div class="carrossel-container">
             <div class="carrossel-procedimento">
-                <img src="assets/img/1.jpg" alt="Procedimento 1">
+                <img src="assets\img\pigmentacao-labios.jpg" alt="Procedimento 1">
             </div>
             <div class="carrossel-procedimento">
-                <img src="assets/img/2.jpg" alt="Procedimento 2">
+                <img src="assets\img\design-sobrancelha.jpg" alt="Procedimento 2">
             </div>
             <div class="carrossel-procedimento">
-                <img src="assets/img/3.jpg" alt="Procedimento 3">
+                <img src="assets\img\remocao-laser.jpg" alt="Procedimento 3">
+            </div>
+            <div class="carrossel-procedimento">
+                <img src="assets\img\imagem_natural.jpg" alt="Procedimento 4">
+            </div>
+            <div class="carrossel-procedimento">
+                <img src="assets\img\imagem_artificial.jpg" alt="Procedimento 5">
             </div>
         </div>
 
@@ -25,6 +31,8 @@
             <span class="dot" onclick="goToSlide(0)"></span>
             <span class="dot" onclick="goToSlide(1)"></span>
             <span class="dot" onclick="goToSlide(2)"></span>
+            <span class="dot" onclick="goToSlide(3)"></span>
+            <span class="dot" onclick="goToSlide(4)"></span>
         </div>
     </div>
 </section>
