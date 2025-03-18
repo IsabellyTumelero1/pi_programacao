@@ -137,7 +137,7 @@ h1 {
 
 .feedback .feedback-container {
     display: flex;
-    margin-top: 260px;
+    margin-top: 180px;
     /* height: 100vh; */
     width: 100vw;
     justify-content: space-around;
