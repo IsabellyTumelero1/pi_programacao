@@ -113,7 +113,22 @@
             padding-bottom: 0px;
         }
 
-        
+        @media(max-width: 960px){
+            .OQueE-MicroDoBem{
+                display: block;
+                text-align: center;
+            }
+
+            .prcedimento-doBem{
+                display: block;
+            }
+            .img-procedimento-doBem{
+                padding-left: 45%;
+            }
+            .img-microdobem{
+                margin-top: 30px;
+            }
+        }
 
     </style>
     <section class="micro-do-bem">

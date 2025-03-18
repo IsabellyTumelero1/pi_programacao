@@ -19,9 +19,10 @@
         display: flex;
         margin-top: 180px;
         /* height: 100vh; */
-        width: 100vw;
+        width: 98vw;
         justify-content: space-around;
         align-items: center;
+        padding-left: 5px;
     }
 
     .feedback2 .feedback-container2 .feedback-comentario2 {
