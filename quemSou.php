@@ -299,7 +299,7 @@ include 'includes/header.php';
  
     <section class="portfolio">
         <div class="interface">
-            <h2 style="text-align: center; font-size: 34px;">MEU <span style="color: #ec7c7e;">PORTFOLIO:</span></h2>
+            <h2 style="text-align: center; font-size: 34px;">MEU <span style="color: #ec7c7e;">PORTFÓLIO:</span></h2>
             <div class="flex">
                 <div class="img-port site1">
                     <div class="overlay">Sobrancelhas</div>
