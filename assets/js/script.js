@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector(".next")?.addEventListener("click", nextSlide);
 
     // Troca automática de slides a cada 10 segundos
-    setInterval(nextSlide, 3000);
+    setInterval(nextSlide, 5000);
 
     // Atualiza a posição inicial do carrossel
     updateCarrossel();
