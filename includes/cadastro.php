@@ -250,6 +250,10 @@ if (isset($_POST['submit'])) {
             this.value = this.value.replace(/[^0-9]/g, ''); // Permite apenas números
             fnAdicionarMensagemDeErro("mensagem-erro-telefone", "limpar");
 
+            // Formatar para (XX)XXXXX-XXXX
+            if (this.value.length >= 2) {
+                this.value = `(${this.value.slice(0, 2)})${this.value.slice(2, 7)}-${this.value.slice(7, 11)}`;
+            }
             if (!fnValidarMinimoDeCaracteres(10, this.value)) {
                 fnAdicionarMensagemDeErro("mensagem-erro-telefone", "* No mínimo 10 caracteres");
             }
