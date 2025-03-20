@@ -13,21 +13,11 @@ include '.\includes\header.php';
 
         <div class="texto-tecnica">
             <div class="titulo-tecnica">Laser</div>
-            <p class="conteudo-descricao">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure in velit, voluptas sit dicta fugit sunt
-                laboriosam recusandae doloribus odio magnam. Id, dolor architecto veniam et praesentium odio, atque
-                vitae inventore in hic tempore adipisci nam voluptatibus iste itaque recusandae illum molestias sit,
-                deleniti rem repellendus placeat! Necessitatibus, quisquam maiores laboriosam ullam nulla deleniti
-                laudantium aspernatur autem voluptas accusamus nisi illo sed tempora ea a pariatur consequatur harum in
-                ipsum vero totam exercitationem alias consequuntur? Laborum asperiores, maiores dignissimos dolores odio
-                ut! Minus recusandae, non error molestias vero culpa itaque esse consequatur veniam ab magnam commodi
-                maiores, tenetur molestiae quidem magni distinctio adipisci quo nobis aspernatur dolore animi voluptatem
-                quos. Exercitationem consectetur velit nisi itaque. Aperiam, veritatis, repudiandae exercitationem animi
-                eveniet fugit velit eaque aut dolorem voluptas impedit officiis. Laudantium iste eum commodi excepturi
-                aspernatur debitis voluptate ipsa minus aperiam, nisi quis amet magni porro sed tempora totam. Veritatis
-                necessitatibus deleniti sapiente deserunt qui rem reprehenderit ipsam pariatur quaerat culpa magni
-                voluptas cumque accusamus tempore iste velit illum ea, totam voluptatem doloribus saepe quo maiores esse
-                adipisci. Quam fuga fugit quidem? Illo ab magnam ipsum sunt, quidem iste veritatis porro, facilis
-                aliquid repellendus culpa sequi eligendi, similique nam quia cum!
+            <p class="conteudo-descricao">Se você está buscando uma solução prática, eficaz e duradoura para se livrar dos pelos indesejados ou apagar aquela tatuagem que já não combina com você, a depilação e remoção de tatuagem a laser são as escolhas perfeitas. Com a depilação a laser, você conquista uma pele lisa e sem pelos de forma permanente, sem o desconforto da cera ou lâmina, e com resultados rápidos e duradouros. Já a remoção de tatuagem a laser oferece uma maneira segura e eficaz de eliminar a tatuagem que você não quer mais, com resultados gradativos e sem deixar marcas ou cicatrizes. Ambos os procedimentos são rápidos, seguros e praticamente sem dor, além de exigirem um número reduzido de sessões para alcançar o resultado desejado. Agende sua consulta e experimente a transformação que esses tratamentos podem proporcionar para sua autoestima e bem-estar!
+
+
+
+.
                 <br><br>
                 <button class="btn-agendamento">
                     <?php
@@ -37,7 +27,8 @@ include '.\includes\header.php';
                         echo '<a class="btn-link" href="includes/agendamento.php">Agende-se</a>';
                     } else {
                         // Se não estiver logado, redireciona para a página de login
-                        echo '<a class="btn-link" href="includes/login.php">Faça login para agendar</a>';
+                        echo '<a class="btn-link" href="includes/login.php">Logar</a>';
+                        echo '<small style="color: red;">* Login necessário para agendamento</small>';
                     }
                     ?>
                 </button>
