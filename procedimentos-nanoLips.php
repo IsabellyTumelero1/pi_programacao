@@ -24,6 +24,7 @@ include '.\includes\header.php';
                     } else {
                         // Se não estiver logado, redireciona para a página de login
                         echo '<a class="btn-link" href="includes/login.php">Logar</a>';
+                        echo '<small style="color: red;">* Login necessário para agendamento</small>';
                     }
                     ?>
                 </button>
