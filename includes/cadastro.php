@@ -9,6 +9,13 @@ if (isset($_POST['submit'])) {
     $genero = $_POST['genero'];
     $confirmarSenha = $_POST['confirmarSenha'];
 
+    // Verificar se o e-mail já existe no banco de dados
+    $check_email = mysqli_query($conexao, "SELECT email FROM usuarios WHERE email = '$email'");
+    if (mysqli_num_rows($check_email) > 0) {
+        echo "<script>alert('Este e-mail já está cadastrado!'); window.location.href='cadastro.php';</script>";
+        exit();
+    }
+
     $result = mysqli_query($conexao, "INSERT INTO usuarios(nome, senha, email, telefone, genero, confirmarSenha) 
         VALUES('$nome', '$senha', '$email', '$telefone', '$genero', '$confirmarSenha')");
 
@@ -102,7 +109,7 @@ if (isset($_POST['submit'])) {
                             <span class="erro" id="mensagem-erro-email">
                         </div>
                         <div class="mb-3">
-                            <input type="tel" id="telefone" name="telefone" class="form-control" placeholder="Telefone" required>
+                            <input type="tel" id="telefone" name="telefone" class="form-control" placeholder="Telefone" required maxlength="11">
                             <span class="erro" id="mensagem-erro-telefone">
                         </div>
                         <div class="mb-3">
@@ -240,8 +247,13 @@ if (isset($_POST['submit'])) {
         });
 
         document.getElementById("telefone").addEventListener("blur", function() {
+            this.value = this.value.replace(/[^0-9]/g, ''); // Permite apenas números
             fnAdicionarMensagemDeErro("mensagem-erro-telefone", "limpar");
 
+            // Formatar para (XX)XXXXX-XXXX
+            if (this.value.length >= 2) {
+                this.value = `(${this.value.slice(0, 2)})${this.value.slice(2, 7)}-${this.value.slice(7, 11)}`;
+            }
             if (!fnValidarMinimoDeCaracteres(10, this.value)) {
                 fnAdicionarMensagemDeErro("mensagem-erro-telefone", "* No mínimo 10 caracteres");
             }

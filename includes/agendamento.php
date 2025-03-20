@@ -65,7 +65,6 @@ if (isset($_GET['data'])) {
 }
 ?>
 
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -73,6 +72,7 @@ if (isset($_GET['data'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agendamento de Consulta</title>
+    <link rel="shortcut icon" href="../assets/img/favicon.ico" type="image/x-icon">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -149,6 +149,11 @@ if (isset($_GET['data'])) {
             text-decoration: none;
             color: white;
         }
+
+        .error {
+            color: red;
+            font-size: 14px;
+        }
     </style>
 </head>
 
@@ -171,6 +176,7 @@ if (isset($_GET['data'])) {
             <div class="form-group">
                 <label for="data">Escolha a Data:</label>
                 <input type="date" id="data" name="data" required placeholder="Escolha a data">
+                <p id="erroData" class="error" style="display:none;">Não é possível agendar para domingo. Por favor, escolha outro dia.</p>
             </div>
 
             <div class="form-group">
@@ -181,6 +187,8 @@ if (isset($_GET['data'])) {
             </div>
 
             <button type="submit">Agendar</button>
+            <br><br>
+            <p style="text-align: center; font-style:oblique;"><b>* Horário de Funcionamento: Segunda a Sábado, das 09:00 às 18:00 *</b></p>
         </form>
     </div>
 
@@ -188,6 +196,7 @@ if (isset($_GET['data'])) {
         document.addEventListener("DOMContentLoaded", function() {
             const dataInput = document.getElementById('data');
             const horaInput = document.getElementById('hora');
+            const erroData = document.getElementById('erroData');
 
             // Impede que o usuário agende para uma data no passado
             const today = new Date().toISOString().split('T')[0];
@@ -204,6 +213,17 @@ if (isset($_GET['data'])) {
             // Função para carregar horários bloqueados e atualizar a lista de horas
             dataInput.addEventListener('change', function() {
                 const selectedDate = dataInput.value;
+
+                // Verifica se a data é domingo
+                const selectedDay = new Date(selectedDate).getDay(); // Retorna o dia da semana (0 para domingo, 6 para sábado)
+                if (selectedDay === 6) {
+                    erroData.style.display = 'block'; // Exibe a mensagem de erro
+                    dataInput.value = ''; // Limpa a data
+                    horaInput.innerHTML = ''; // Limpa os horários
+                    return;
+                } else {
+                    erroData.style.display = 'none'; // Esconde a mensagem de erro se não for domingo
+                }
 
                 if (selectedDate) {
                     fetch('?data=' + selectedDate) // Requisição para o próprio arquivo
