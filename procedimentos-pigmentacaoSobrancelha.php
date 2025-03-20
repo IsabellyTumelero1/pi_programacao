@@ -13,21 +13,14 @@ include '.\includes\header.php';
 
         <div class="texto-tecnica">
             <div class="titulo-tecnica">Nano Pigmentação de Sobrancelha</div>
-            <p class="conteudo-descricao">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure in velit, voluptas sit dicta fugit sunt
-                laboriosam recusandae doloribus odio magnam. Id, dolor architecto veniam et praesentium odio, atque
-                vitae inventore in hic tempore adipisci nam voluptatibus iste itaque recusandae illum molestias sit,
-                deleniti rem repellendus placeat! Necessitatibus, quisquam maiores laboriosam ullam nulla deleniti
-                laudantium aspernatur autem voluptas accusamus nisi illo sed tempora ea a pariatur consequatur harum in
-                ipsum vero totam exercitationem alias consequuntur? Laborum asperiores, maiores dignissimos dolores odio
-                ut! Minus recusandae, non error molestias vero culpa itaque esse consequatur veniam ab magnam commodi
-                maiores, tenetur molestiae quidem magni distinctio adipisci quo nobis aspernatur dolore animi voluptatem
-                quos. Exercitationem consectetur velit nisi itaque. Aperiam, veritatis, repudiandae exercitationem animi
-                eveniet fugit velit eaque aut dolorem voluptas impedit officiis. Laudantium iste eum commodi excepturi
-                aspernatur debitis voluptate ipsa minus aperiam, nisi quis amet magni porro sed tempora totam. Veritatis
-                necessitatibus deleniti sapiente deserunt qui rem reprehenderit ipsam pariatur quaerat culpa magni
-                voluptas cumque accusamus tempore iste velit illum ea, totam voluptatem doloribus saepe quo maiores esse
-                adipisci. Quam fuga fugit quidem? Illo ab magnam ipsum sunt, quidem iste veritatis porro, facilis
-                aliquid repellendus culpa sequi eligendi, similique nam quia cum!
+            <p class="conteudo-descricao">Imagine acordar todos os dias com sobrancelhas perfeitas, sem precisar de maquiagem! 
+                A pigmentação de sobrancelhas é a solução ideal para quem deseja um olhar mais expressivo, harmonioso e natural. 
+                Com técnicas modernas e seguras, esse procedimento preenche falhas, realça o desenho natural e valoriza a beleza do rosto, 
+                proporcionando um efeito sofisticado e duradouro. A aplicação é feita com pigmentos de alta qualidade, escolhidos de acordo 
+                com o seu tom de pele e fios, garantindo um resultado personalizado e elegante. Além de economizar tempo na sua rotina diária, 
+                a pigmentação traz mais autoestima e praticidade, deixando seu visual impecável 24 horas por dia. Nossa técnica é indolor, 
+                segura e realizada por profissionais capacitados, para que você tenha uma experiência confortável e um resultado incrível. 
+                Agende já a sua sessão e descubra como transformar seu olhar com sobrancelhas definidas, naturais e deslumbrantes!
                 <br><br>
                 <button class="btn-agendamento">
                     <?php
@@ -37,7 +30,7 @@ include '.\includes\header.php';
                         echo '<a class="btn-link" href="includes/agendamento.php">Agende-se</a>';
                     } else {
                         // Se não estiver logado, redireciona para a página de login
-                        echo '<a class="btn-link" href="includes/login.php">Faça login para agendar</a>';
+                        echo '<a class="btn-link" href="includes/login.php">Logar</a>';
                     }
                     ?>
                 </button>
