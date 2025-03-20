@@ -19,13 +19,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $hora = $_POST['hora'];
     $email = $_SESSION['email'];
 
-    // Verifica se a data selecionada é um domingo
-    // $diaSemana = date('w', strtotime($data)); // 'w' retorna o dia da semana (0 para domingo, 6 para sábado)
-    // if ($diaSemana == 0) {
-    //     echo "<p>Não é possível agendar para domingo. Por favor, escolha outro dia.</p>";
-    //     exit();
-    // }
-
     // Pega o ID do usuário logado
     $sql = "SELECT id FROM usuarios WHERE email = '$email'";
     $result = $conexao->query($sql);
