@@ -13,21 +13,7 @@ include '.\includes\header.php';
 
         <div class="texto-tecnica">
             <div class="titulo-tecnica">Nano Lips</div>
-            <p class="conteudo-descricao">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure in velit, voluptas sit dicta fugit sunt
-                laboriosam recusandae doloribus odio magnam. Id, dolor architecto veniam et praesentium odio, atque
-                vitae inventore in hic tempore adipisci nam voluptatibus iste itaque recusandae illum molestias sit,
-                deleniti rem repellendus placeat! Necessitatibus, quisquam maiores laboriosam ullam nulla deleniti
-                laudantium aspernatur autem voluptas accusamus nisi illo sed tempora ea a pariatur consequatur harum in
-                ipsum vero totam exercitationem alias consequuntur? Laborum asperiores, maiores dignissimos dolores odio
-                ut! Minus recusandae, non error molestias vero culpa itaque esse consequatur veniam ab magnam commodi
-                maiores, tenetur molestiae quidem magni distinctio adipisci quo nobis aspernatur dolore animi voluptatem
-                quos. Exercitationem consectetur velit nisi itaque. Aperiam, veritatis, repudiandae exercitationem animi
-                eveniet fugit velit eaque aut dolorem voluptas impedit officiis. Laudantium iste eum commodi excepturi
-                aspernatur debitis voluptate ipsa minus aperiam, nisi quis amet magni porro sed tempora totam. Veritatis
-                necessitatibus deleniti sapiente deserunt qui rem reprehenderit ipsam pariatur quaerat culpa magni
-                voluptas cumque accusamus tempore iste velit illum ea, totam voluptatem doloribus saepe quo maiores esse
-                adipisci. Quam fuga fugit quidem? Illo ab magnam ipsum sunt, quidem iste veritatis porro, facilis
-                aliquid repellendus culpa sequi eligendi, similique nam quia cum!
+            <p class="conteudo-descricao">O procedimento "Nano Lips" é uma técnica moderna de micro pigmentação labial, que visa aprimorar a aparência dos lábios, proporcionando mais definição e cor natural. Esse tratamento é ideal para pessoas que desejam corrigir assimetrias, dar volume ou simplesmente realçar a cor dos lábios sem recorrer a intervenções invasivas. O "Nano Lips" utiliza uma tecnologia de microagulhas ultrafinas para depositar pigmentos na camada superficial da pele dos lábios. A técnica é chamada de micro pigmentação, pois o pigmento é aplicado de forma precisa e controlada, com agulhas em tamanho nanométrico. O objetivo é criar um efeito mais suave e natural, diferente de outras técnicas mais tradicionais que podem deixar o resultado com contornos mais marcados. Durante o procedimento, o profissional realiza um mapeamento personalizado dos lábios, levando em consideração a forma e a cor desejada. O uso das agulhas de nano precisa permite uma aplicação uniforme e delicada, evitando a sensação de lábios artificiais.</p>
                 <br><br>
                 <button class="btn-agendamento">
                     <?php
@@ -37,7 +23,7 @@ include '.\includes\header.php';
                         echo '<a class="btn-link" href="includes/agendamento.php">Agende-se</a>';
                     } else {
                         // Se não estiver logado, redireciona para a página de login
-                        echo '<a class="btn-link" href="includes/login.php">Faça login para agendar</a>';
+                        echo '<a class="btn-link" href="includes/login.php">Logar</a>';
                     }
                     ?>
                 </button>
